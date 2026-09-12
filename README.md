@@ -81,6 +81,7 @@ makes one request and is preferable when the full asset is wanted.
 ```sh
 npm test
 npm run build
+npm run test:package       # install and check the actual packed library
 npx playwright install chromium
 npm run fixtures -- --catalog
 npm run assets

@@ -31,7 +31,8 @@
     "setup:converter": "node scripts/setup-converter.mjs",
     "preassets": "npm run setup:converter",
     "preassets:optimized": "npm run setup:converter",
-    "prefixtures": "npm run setup:converter"
+    "prefixtures": "npm run setup:converter",
+    "test:package": "node scripts/check-package.mjs"
   },
   "peerDependencies": {
     "three": "0.186.x"
@@ -58,6 +59,7 @@
     "SPECIFICATION.md",
     "docs",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "scripts/prepare-decoders.mjs"
   ]
 }
