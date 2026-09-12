@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
 import sharp from 'sharp';
+test.beforeAll(async()=>{await fs.mkdir('artifacts',{recursive:true});});
 async function open(page) { await page.goto('/'); await page.waitForFunction(() => !!window.lab); }
 async function pixels(page) {
   return page.evaluate(async () => {
