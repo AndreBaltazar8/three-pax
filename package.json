@@ -1,0 +1,63 @@
+{
+  "name": "three-pax",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "André Baltazar",
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreBaltazar8/three-pax.git"
+  },
+  "description": "Three.js loader, resumable progressive streaming and comparison samples for PAX numeric version 0",
+  "exports": {
+    ".": "./src/index.js",
+    "./*": "./src/*.js"
+  },
+  "scripts": {
+    "dev": "node server.mjs",
+    "build": "vite build",
+    "assets": "node scripts/assets.mjs",
+    "assets:optimized": "node scripts/optimized-assets.mjs",
+    "fixtures": "node scripts/compatibility-assets.mjs",
+    "prepare:decoders": "node scripts/prepare-decoders.mjs",
+    "postinstall": "npm run prepare:decoders",
+    "test": "node --test tests/api.test.mjs",
+    "test:browser": "playwright test",
+    "benchmark": "node scripts/benchmark-v0.mjs",
+    "build:interactivity": "node scripts/build-interactivity.mjs",
+    "setup:converter": "node scripts/setup-converter.mjs",
+    "preassets": "npm run setup:converter",
+    "preassets:optimized": "npm run setup:converter",
+    "prefixtures": "npm run setup:converter"
+  },
+  "peerDependencies": {
+    "three": "0.186.x"
+  },
+  "dependencies": {
+    "meshoptimizer": "1.2.0",
+    "ktx-parse": "2.0.0",
+    "gl-matrix": "3.4.4"
+  },
+  "devDependencies": {
+    "three": "0.186.0",
+    "@gltf-transform/core": "4.5.0",
+    "@gltf-transform/extensions": "4.5.0",
+    "@gltf-transform/functions": "4.5.0",
+    "@playwright/test": "1.63.0",
+    "vite": "8.3.0",
+    "esbuild": "0.28.2",
+    "sharp": "0.35.4",
+    "draco3dgltf": "1.5.7"
+  },
+  "files": [
+    "src",
+    "vendor",
+    "SPECIFICATION.md",
+    "docs",
+    "LICENSE",
+    "README.md"
+  ]
+}

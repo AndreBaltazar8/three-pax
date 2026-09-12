@@ -1,0 +1,374 @@
+{
+  "version": 0,
+  "features": [
+    "primitive-modes",
+    "final-order"
+  ],
+  "conversionSettings": {
+    "textureBaseSize": 128,
+    "geometryBaseRatio": 0.015,
+    "adaptive": true,
+    "initialQuality": "balanced",
+    "geometryCodec": "auto",
+    "textureTiles": true,
+    "tileSize": 256
+  },
+  "name": "TestGaussianSplats",
+  "levels": 5,
+  "sourceBytes": 1937340,
+  "sourceSHA256": "82ea6eeaf2ada71e9ddf111374dcc244044f26e71fb688facd121142c7a3fbdb",
+  "animations": 0,
+  "extensionStrategies": [
+    {
+      "name": "KHR_gaussian_splatting",
+      "strategy": "spatially distributed reusable splat prefixes; exact covariance, opacity and SH attribute refinement"
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "indexWidth": 1,
+      "originalMode": 0,
+      "instances": [
+        {
+          "mesh": 0,
+          "primitive": 0
+        }
+      ],
+      "finalVertices": 8192,
+      "finalTriangles": 8192,
+      "baseVertices": 122,
+      "baseTriangles": 122,
+      "levels": 5,
+      "quality": [
+        {
+          "error": 0.985,
+          "ratio": 0.015,
+          "primitives": 122
+        },
+        {
+          "error": 0.76,
+          "ratio": 0.24,
+          "estimatedBytes": 471840,
+          "errorGain": 0.22842639593908629,
+          "primitives": 1966
+        },
+        {
+          "error": 0.5,
+          "ratio": 0.5,
+          "estimatedBytes": 983040,
+          "errorGain": 0.34210526315789475,
+          "primitives": 4096
+        },
+        {
+          "error": 0.16000000000000003,
+          "ratio": 0.84,
+          "estimatedBytes": 1651440,
+          "errorGain": 0.6799999999999999,
+          "primitives": 6881
+        },
+        {
+          "error": 0,
+          "ratio": 1,
+          "primitives": 8192
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "attributes": [
+        {
+          "semantic": "POSITION",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SCALE",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:ROTATION",
+          "componentType": 5126,
+          "itemSize": 4,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:OPACITY",
+          "componentType": 5126,
+          "itemSize": 1,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_0_COEF_0",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_0",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_1",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_2",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_0",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_1",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_2",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_3",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_4",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_0",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_1",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_2",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_3",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_4",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_5",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_6",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        }
+      ]
+    }
+  ],
+  "textures": [],
+  "maxOverhead": 0.05,
+  "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+  "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+  "animationMode": "complete original clips in bootstrap",
+  "bootstrapExtensionPackets": 0,
+  "streamBytes": 1747171,
+  "bootstrapBytes": 29360,
+  "baseGLBBytes": 33376,
+  "geometryPatchBytes": 1717954,
+  "texturePayloadBytes": 0,
+  "latticeTextures": 0,
+  "sourceTextures": 0,
+  "overheadPercent": -9.815984803906385,
+  "sizeBudgetBytes": 2034207,
+  "packets": 7,
+  "directoryBytes": 280,
+  "geometryCodecStats": [
+    {
+      "primitive": 0,
+      "level": 1,
+      "raw": 404095,
+      "selected": 394104,
+      "codecs": {
+        "meshopt": 20,
+        "raw": 1,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 2,
+      "raw": 466286,
+      "selected": 454523,
+      "codecs": {
+        "meshopt": 20,
+        "raw": 1,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 3,
+      "raw": 609702,
+      "selected": 592722,
+      "codecs": {
+        "meshopt": 20,
+        "raw": 1,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 4,
+      "raw": 303088,
+      "selected": 282704,
+      "codecs": {
+        "meshopt": 21,
+        "raw": 1,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    }
+  ],
+  "verification": {
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "attributes": [
+          {
+            "semantic": "POSITION",
+            "hash": "0a97f823c65077c984855acb0c47e88b1647c8a60e9514b33af725f9fe8bca16"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SCALE",
+            "hash": "26f631b30ecf1ec7ec5dfc068c9d601dbd0e28c43d1b51a5d5b347355db0d0af"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:ROTATION",
+            "hash": "d181b573d40a081ff5aac332c29363b3689dc9c28deefdeaedb2f065922874ac"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:OPACITY",
+            "hash": "36b496c6b21f80d3b7f20b8c02a4ac183a7f1e69630b4ed8051339bb52c3a906"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_0_COEF_0",
+            "hash": "83c5d0e448aae40e1a98e9981a9c9f8f44ea998bc883f5d1f9a09acd35edd87e"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_0",
+            "hash": "74985f3e030c4e7a3a420e3f9b505ff024605ef7b7c7e49de1f07c41d7208d01"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_1",
+            "hash": "37916e7065cae3f77cfd76c7a026698f4f961892f32a43c8f1b897bfec70e8a7"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_2",
+            "hash": "72481225c4de070966fcd4bcb68f5f63020a7884a847ad31ca8aa64a6950b876"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_0",
+            "hash": "3d3348d33dce09595e9f7d5b0b53f94d4c0724dd31265e7db85de29eccd45c6c"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_1",
+            "hash": "f9d58688bcf42e00c188fb6e09ee82742b93149399886592977c9362df2087f4"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_2",
+            "hash": "dd8c70f84908192239d152a2e7ae8f2ac4ae1d380ad7ed285da5e76e32989ad7"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_3",
+            "hash": "e09e83d471b2f3f5e8bf9c2c94fad1b16f3e10d3ed31111e15ccd05481d7c1d4"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_4",
+            "hash": "d5a4ffe41bf0c63e5c765ed19b5b65ae79d432111f7ac6138f2f4ddd5056ebca"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_0",
+            "hash": "a0d1d8c886ae44cc6907f54494e865e89c67c81284e3eeea21a2338e6b1430ca"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_1",
+            "hash": "b5ac39a31c8a0cbaf6880a8f86243e72a578102f418eb78cb258d956c488e241"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_2",
+            "hash": "d1a942955cd4b0dfc970e86f5ca7c2076843932cf137cb49cee29f5d7ad7ea4f"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_3",
+            "hash": "5e377195b63083da589da1c546527484e245156d95569b37670e313b0224a4b7"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_4",
+            "hash": "816ffaafcfbda013550272ebd9274e8b0bb7e97b7bde2bbbe6e170896280efb4"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_5",
+            "hash": "bd67201530fd0443a09786c59014ddb38ebc78dbabbc5aa7fbf09b1b6c06293c"
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_6",
+            "hash": "700f74f70c72bb8c27b953187f005300f30e8f620ded67bf6a34b5e2c5a02490"
+          }
+        ],
+        "finalIndicesHash": "0815e0058a24fbb0836439b915726112856d2f040e4a11f458d9fa4f4b6668f5",
+        "originalVertices": 8192,
+        "originalTriangles": 2730.6666666666665
+      }
+    ],
+    "textures": []
+  }
+}

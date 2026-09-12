@@ -1,0 +1,355 @@
+{
+  "version": 0,
+  "features": [
+    "primitive-modes",
+    "final-order"
+  ],
+  "conversionSettings": {
+    "textureBaseSize": 128,
+    "geometryBaseRatio": 0.015,
+    "adaptive": true,
+    "initialQuality": "balanced",
+    "geometryCodec": "auto",
+    "textureTiles": true,
+    "tileSize": 256
+  },
+  "name": "BoomBox",
+  "levels": 8,
+  "sourceBytes": 10614184,
+  "sourceSHA256": "f8b918445ebdd006768232205a62f5182d2208ca57f84c6ccc084943c0bc8f15",
+  "animations": 0,
+  "extensionStrategies": [],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "indexWidth": 3,
+      "originalMode": 4,
+      "instances": [
+        {
+          "mesh": 0,
+          "primitive": 0
+        }
+      ],
+      "finalVertices": 3575,
+      "finalTriangles": 6036,
+      "baseVertices": 135,
+      "baseTriangles": 88,
+      "levels": 8,
+      "quality": [
+        {
+          "error": 0.37759149074554443,
+          "ratio": 0.015,
+          "primitives": 88
+        },
+        {
+          "error": 0.09533874690532684,
+          "ratio": 0.025,
+          "estimatedBytes": 9984,
+          "errorGain": 0.7475082218693991,
+          "primitives": 148
+        },
+        {
+          "error": 0.05551423877477646,
+          "ratio": 0.04,
+          "estimatedBytes": 14160,
+          "errorGain": 0.4177158754781712,
+          "primitives": 240
+        },
+        {
+          "error": 0.026029912754893303,
+          "ratio": 0.065,
+          "estimatedBytes": 20232,
+          "errorGain": 0.5311128580813703,
+          "primitives": 390
+        },
+        {
+          "error": 0.009563406929373741,
+          "ratio": 0.16,
+          "estimatedBytes": 44400,
+          "errorGain": 0.6325993475496402,
+          "primitives": 964
+        },
+        {
+          "error": 0.004140505101531744,
+          "ratio": 0.35,
+          "estimatedBytes": 88884,
+          "errorGain": 0.5670470647009387,
+          "primitives": 2111
+        },
+        {
+          "error": 0.0014117567334324121,
+          "ratio": 0.68,
+          "estimatedBytes": 169104,
+          "errorGain": 0.6590375572994355,
+          "primitives": 4104
+        },
+        {
+          "error": 0,
+          "ratio": 1,
+          "primitives": 6036
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.009921154,
+          -0.00977163,
+          -0.0100762453
+        ],
+        "max": [
+          0.009921154,
+          0.00977163,
+          0.0100762453
+        ]
+      },
+      "attributes": [
+        {
+          "semantic": "TEXCOORD_0",
+          "componentType": 5126,
+          "itemSize": 2,
+          "normalized": false
+        },
+        {
+          "semantic": "NORMAL",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "TANGENT",
+          "componentType": 5126,
+          "itemSize": 4,
+          "normalized": false
+        },
+        {
+          "semantic": "POSITION",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "importance": 3,
+      "roles": [
+        "baseColorTexture"
+      ],
+      "previewError": 0.03492192287071078,
+      "image": 0,
+      "width": 2048,
+      "height": 2048,
+      "baseWidth": 128,
+      "baseHeight": 128,
+      "levels": 9,
+      "codec": "tile-lattice",
+      "tileSize": 256,
+      "tileCount": 64
+    },
+    {
+      "importance": 1,
+      "roles": [
+        "metallicRoughnessTexture",
+        "occlusionTexture"
+      ],
+      "previewError": 0.023198864506740195,
+      "image": 1,
+      "width": 2048,
+      "height": 2048,
+      "baseWidth": 128,
+      "baseHeight": 128,
+      "levels": 9,
+      "codec": "tile-lattice",
+      "tileSize": 256,
+      "tileCount": 64
+    },
+    {
+      "importance": 1.5,
+      "roles": [
+        "normalTexture"
+      ],
+      "previewError": 0.007624368106617647,
+      "image": 2,
+      "width": 2048,
+      "height": 2048,
+      "baseWidth": 16,
+      "baseHeight": 16,
+      "levels": 2,
+      "codec": "source",
+      "tileSize": 256,
+      "tileCount": 64
+    },
+    {
+      "importance": 3,
+      "roles": [
+        "emissiveTexture"
+      ],
+      "previewError": 0.0028317918964460786,
+      "image": 3,
+      "width": 2048,
+      "height": 2048,
+      "baseWidth": 16,
+      "baseHeight": 16,
+      "levels": 15,
+      "codec": "tile-lattice",
+      "tileSize": 256,
+      "tileCount": 64
+    }
+  ],
+  "maxOverhead": 0.05,
+  "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+  "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+  "animationMode": "complete original clips in bootstrap",
+  "bootstrapExtensionPackets": 0,
+  "streamBytes": 11102572,
+  "bootstrapBytes": 160671,
+  "baseGLBBytes": 47520,
+  "geometryPatchBytes": 187143,
+  "texturePayloadBytes": 10831861,
+  "latticeTextures": 3,
+  "sourceTextures": 1,
+  "overheadPercent": 4.601276932828746,
+  "sizeBudgetBytes": 11144893,
+  "packets": 1931,
+  "directoryBytes": 77240,
+  "geometryCodecStats": [
+    {
+      "primitive": 0,
+      "level": 1,
+      "raw": 2337,
+      "selected": 2055,
+      "codecs": {
+        "meshopt": 4,
+        "raw": 1,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 2,
+      "raw": 4490,
+      "selected": 3902,
+      "codecs": {
+        "meshopt": 3,
+        "raw": 2,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 3,
+      "raw": 6493,
+      "selected": 5687,
+      "codecs": {
+        "meshopt": 3,
+        "raw": 2,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 4,
+      "raw": 20705,
+      "selected": 18699,
+      "codecs": {
+        "meshopt": 4,
+        "raw": 1,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 5,
+      "raw": 37816,
+      "selected": 34292,
+      "codecs": {
+        "meshopt": 5,
+        "sequence": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 6,
+      "raw": 68865,
+      "selected": 62112,
+      "codecs": {
+        "meshopt": 4,
+        "sequence": 1,
+        "raw": 1
+      },
+      "packetCodec": "blocks"
+    },
+    {
+      "primitive": 0,
+      "level": 7,
+      "raw": 72748,
+      "selected": 58278,
+      "codecs": {
+        "meshopt": 5,
+        "sequence": 2
+      },
+      "packetCodec": "blocks"
+    }
+  ],
+  "verification": {
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "attributes": [
+          {
+            "semantic": "TEXCOORD_0",
+            "hash": "cca6434f0a67ef3a5b965f8fde65ed45784b3a1d4c9396f62dd0cbb461dd756d"
+          },
+          {
+            "semantic": "NORMAL",
+            "hash": "658259af5c1812d82977e3da4fc877a6a0529d242d31fce88ffef36cd8ed5c51"
+          },
+          {
+            "semantic": "TANGENT",
+            "hash": "5c7d9aebbcf6f9c1a63f820dba3f527b39db7e541db8ff7ba7b03bffa083ef6c"
+          },
+          {
+            "semantic": "POSITION",
+            "hash": "7449352119de46b78bddb2ba4b55f5169f77278255ada35acfd8ac0cc9851ee2"
+          }
+        ],
+        "finalIndicesHash": "4d8234e6bceeaa66ec023fb96a5e0e5d29717711cf4bd858c91332736a897511",
+        "originalVertices": 3575,
+        "originalTriangles": 6036
+      }
+    ],
+    "textures": [
+      {
+        "image": 0,
+        "width": 2048,
+        "height": 2048,
+        "hash": "91f5cf35c72ba725a6d3885734b6805693a488830b1b0256899690f2c3f9527b"
+      },
+      {
+        "image": 1,
+        "width": 2048,
+        "height": 2048,
+        "hash": "9a7d726f4f345883fd1989135a4ae86c90e14871b60f69a2eb4bfb6cff038d64"
+      },
+      {
+        "image": 2,
+        "width": 2048,
+        "height": 2048,
+        "hash": "650679ead9958fb60c46a856923e78ba2bf0568611192a28f45ab40da9f8322c"
+      },
+      {
+        "image": 3,
+        "width": 2048,
+        "height": 2048,
+        "hash": "ae82bf5993f51ad65a6964a96caefa60020821fdca30473e78d8691099eefad8"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {PAXLoader,VERSION} from '../src/index.js';test('loader and numeric version are importable without a DOM',()=>{assert.equal(VERSION,0);const loader=new PAXLoader();assert.equal(typeof loader.load,'function');assert.equal(typeof loader.registerExtension,'function');});

@@ -1,0 +1,1029 @@
+[
+  {
+    "id": "BoomBox",
+    "name": "Boom box",
+    "kind": "Emissive \u00b7 Metallic / roughness",
+    "file": "glTF-Binary/BoomBox.glb",
+    "license": "CC0-1.0",
+    "author": "Microsoft",
+    "revision": "90d7ede14c7e280af263824604b427a1ca02cb66",
+    "sourceURL": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/90d7ede14c7e280af263824604b427a1ca02cb66/Models/BoomBox/glTF-Binary/BoomBox.glb",
+    "sha256": "f8b918445ebdd006768232205a62f5182d2208ca57f84c6ccc084943c0bc8f15",
+    "repacked": false,
+    "sourcePage": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/90d7ede14c7e280af263824604b427a1ca02cb66/Models/BoomBox",
+    "sourceBytes": 10614184,
+    "streamBytes": 11102572,
+    "bootstrapBytes": 160671,
+    "triangles": 6036,
+    "vertices": 3575,
+    "textures": 4,
+    "animations": 0,
+    "latticeTextures": 3,
+    "sourceTextures": 1,
+    "overheadPercent": 4.601276932828746
+  },
+  {
+    "version": 0,
+    "features": [
+      "primitive-modes",
+      "final-order"
+    ],
+    "conversionSettings": {
+      "textureBaseSize": 16,
+      "geometryBaseRatio": 0.015,
+      "adaptive": true,
+      "initialQuality": "balanced",
+      "geometryCodec": "auto",
+      "textureTiles": true,
+      "tileSize": 256
+    },
+    "name": "Basis GPU texture",
+    "levels": 2,
+    "sourceBytes": 94336,
+    "sourceSHA256": "adf89c381efca3a961fb8129cdf3cbbb7b48fa781141145aee6c204ebaa0e305",
+    "animations": 0,
+    "extensionStrategies": [
+      {
+        "name": "KHR_texture_basisu",
+        "strategy": "RGBA bootstrap preview; original GPU mip levels streamed with a shared codebook, exact source fallback"
+      }
+    ],
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "indexWidth": 3,
+        "originalMode": 4,
+        "instances": [
+          {
+            "mesh": 0,
+            "primitive": 0
+          }
+        ],
+        "finalVertices": 3,
+        "finalTriangles": 1,
+        "baseVertices": 3,
+        "baseTriangles": 1,
+        "levels": 2,
+        "quality": [
+          {
+            "error": 0,
+            "ratio": 0.015,
+            "primitives": 1
+          },
+          {
+            "error": 0,
+            "ratio": 1,
+            "primitives": 1
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1,
+            -1,
+            0
+          ],
+          "max": [
+            1,
+            1,
+            0
+          ]
+        },
+        "attributes": [
+          {
+            "semantic": "POSITION",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "TEXCOORD_0",
+            "componentType": 5126,
+            "itemSize": 2,
+            "normalized": false
+          }
+        ]
+      }
+    ],
+    "textures": 1,
+    "maxOverhead": 0.05,
+    "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+    "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+    "animationMode": "complete original clips in bootstrap",
+    "bootstrapExtensionPackets": 0,
+    "streamBytes": 96878,
+    "bootstrapBytes": 3431,
+    "baseGLBBytes": 1692,
+    "geometryPatchBytes": 148,
+    "texturePayloadBytes": 93762,
+    "latticeTextures": 1,
+    "sourceTextures": 0,
+    "overheadPercent": 2.694623473541391,
+    "sizeBudgetBytes": 99052,
+    "packets": 15,
+    "directoryBytes": 600,
+    "geometryCodecStats": [
+      {
+        "primitive": 0,
+        "level": 1,
+        "raw": 4,
+        "selected": 4,
+        "codecs": {
+          "raw": 5
+        },
+        "packetCodec": "gzip"
+      }
+    ],
+    "verification": {
+      "primitives": [
+        {
+          "mesh": 0,
+          "primitive": 0,
+          "attributes": [
+            {
+              "semantic": "POSITION",
+              "hash": "79f7a3b42c57393857bd6618d0e16bc46138e3f601a7aae088eb649004962fbb"
+            },
+            {
+              "semantic": "TEXCOORD_0",
+              "hash": "7250a8b97e31a5515fe8d48b760baa052dea5b5ae1c0204b8bc04f47c5de2e55"
+            }
+          ],
+          "finalIndicesHash": "ad5dc1478de06a4c2728ea528bd9361a4b945e92a414bf4d180cedaaeaa5f4cc",
+          "originalVertices": 3,
+          "originalTriangles": 1
+        }
+      ],
+      "textures": [
+        {
+          "image": 0,
+          "width": 1024,
+          "height": 1024,
+          "hash": "adcedb19840e410421215cacf41ab6b6608d39bf4edb317993c66eeb042737eb"
+        }
+      ]
+    },
+    "id": "TestBasis",
+    "kind": "Compatibility fixture",
+    "sourcePage": "/assets/TestBasis.stats.json",
+    "triangles": 1,
+    "vertices": 3
+  },
+  {
+    "version": 0,
+    "features": [
+      "primitive-modes",
+      "final-order"
+    ],
+    "conversionSettings": {
+      "textureBaseSize": 16,
+      "geometryBaseRatio": 0.015,
+      "adaptive": true,
+      "initialQuality": "balanced",
+      "geometryCodec": "auto",
+      "textureTiles": true,
+      "tileSize": 128
+    },
+    "name": "Diffuse transmission",
+    "levels": 6,
+    "sourceBytes": 351976,
+    "sourceSHA256": "f1de9192646aeaf4308d80e5f8b5e50790bc8dcef3f9f2d17aa8a62c3424817f",
+    "animations": 0,
+    "extensionStrategies": [
+      {
+        "name": "KHR_materials_diffuse_transmission",
+        "strategy": "material with refining texture slots"
+      },
+      {
+        "name": "KHR_materials_volume",
+        "strategy": "material with refining texture slots"
+      }
+    ],
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "indexWidth": 3,
+        "originalMode": 4,
+        "instances": [
+          {
+            "mesh": 0,
+            "primitive": 0
+          }
+        ],
+        "finalVertices": 1617,
+        "finalTriangles": 2976,
+        "baseVertices": 87,
+        "baseTriangles": 84,
+        "levels": 6,
+        "quality": [
+          {
+            "error": 0.7449597716331482,
+            "ratio": 0.015,
+            "primitives": 84
+          },
+          {
+            "error": 0.058050114661455154,
+            "ratio": 0.065,
+            "estimatedBytes": 7712,
+            "errorGain": 0.9220761752890442,
+            "primitives": 192
+          },
+          {
+            "error": 0.011915155686438084,
+            "ratio": 0.16,
+            "estimatedBytes": 16036,
+            "errorGain": 0.7947436321887292,
+            "primitives": 475
+          },
+          {
+            "error": 0.005165872164070606,
+            "ratio": 0.35,
+            "estimatedBytes": 32352,
+            "errorGain": 0.5664452651717813,
+            "primitives": 1040
+          },
+          {
+            "error": 0.003381819697096944,
+            "ratio": 0.68,
+            "estimatedBytes": 60360,
+            "errorGain": 0.34535358412118816,
+            "primitives": 2022
+          },
+          {
+            "error": 0,
+            "ratio": 1,
+            "primitives": 2976
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1,
+            -1,
+            -1
+          ],
+          "max": [
+            1,
+            1,
+            1
+          ]
+        },
+        "attributes": [
+          {
+            "semantic": "POSITION",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "NORMAL",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "TEXCOORD_0",
+            "componentType": 5126,
+            "itemSize": 2,
+            "normalized": false
+          }
+        ]
+      }
+    ],
+    "textures": 1,
+    "maxOverhead": 0.05,
+    "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+    "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+    "animationMode": "complete original clips in bootstrap",
+    "bootstrapExtensionPackets": 0,
+    "streamBytes": 313354,
+    "bootstrapBytes": 5552,
+    "baseGLBBytes": 6480,
+    "geometryPatchBytes": 40339,
+    "texturePayloadBytes": 268926,
+    "latticeTextures": 1,
+    "sourceTextures": 0,
+    "overheadPercent": -10.9729072436757,
+    "sizeBudgetBytes": 369574,
+    "packets": 40,
+    "directoryBytes": 1600,
+    "geometryCodecStats": [
+      {
+        "primitive": 0,
+        "level": 1,
+        "raw": 2548,
+        "selected": 2191,
+        "codecs": {
+          "raw": 2,
+          "meshopt": 2,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 2,
+        "raw": 5495,
+        "selected": 4685,
+        "codecs": {
+          "raw": 2,
+          "meshopt": 2,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 3,
+        "raw": 10701,
+        "selected": 9207,
+        "codecs": {
+          "raw": 2,
+          "meshopt": 2,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 4,
+        "raw": 18280,
+        "selected": 15926,
+        "codecs": {
+          "raw": 2,
+          "delta": 1,
+          "sequence": 1,
+          "meshopt": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 5,
+        "raw": 20108,
+        "selected": 14420,
+        "codecs": {
+          "raw": 2,
+          "delta": 1,
+          "sequence": 2,
+          "meshopt": 1
+        },
+        "packetCodec": "blocks"
+      }
+    ],
+    "verification": {
+      "primitives": [
+        {
+          "mesh": 0,
+          "primitive": 0,
+          "attributes": [
+            {
+              "semantic": "POSITION",
+              "hash": "58cda8a192b7931a7820f8539ddd00db581ce12ace6087fe1d043e8ce0a28fdd"
+            },
+            {
+              "semantic": "NORMAL",
+              "hash": "58cda8a192b7931a7820f8539ddd00db581ce12ace6087fe1d043e8ce0a28fdd"
+            },
+            {
+              "semantic": "TEXCOORD_0",
+              "hash": "425c0cf73ad295061c2184b3908d0f94d5f445875e80fc058cf7b8edf87534c0"
+            }
+          ],
+          "finalIndicesHash": "d66580e94077613fe731f658deee24023c34d7372df9e5a6acaa47745ce2325d",
+          "originalVertices": 1617,
+          "originalTriangles": 2976
+        }
+      ],
+      "textures": [
+        {
+          "image": 0,
+          "width": 256,
+          "height": 256,
+          "hash": "83d1d14074f3ef6486faa0e120d55da43764e4f6d01077ac06e3bf6b5a193d3a"
+        }
+      ]
+    },
+    "id": "TestDiffuseTransmission",
+    "kind": "Compatibility fixture",
+    "sourcePage": "/assets/TestDiffuseTransmission.stats.json",
+    "triangles": 2976,
+    "vertices": 1617
+  },
+  {
+    "version": 0,
+    "features": [
+      "primitive-modes",
+      "final-order"
+    ],
+    "conversionSettings": {
+      "textureBaseSize": 128,
+      "geometryBaseRatio": 0.015,
+      "adaptive": true,
+      "initialQuality": "balanced",
+      "geometryCodec": "auto",
+      "textureTiles": true,
+      "tileSize": 256
+    },
+    "name": "Progressive Gaussian splats",
+    "levels": 5,
+    "sourceBytes": 1937340,
+    "sourceSHA256": "82ea6eeaf2ada71e9ddf111374dcc244044f26e71fb688facd121142c7a3fbdb",
+    "animations": 0,
+    "extensionStrategies": [
+      {
+        "name": "KHR_gaussian_splatting",
+        "strategy": "spatially distributed reusable splat prefixes; exact covariance, opacity and SH attribute refinement"
+      }
+    ],
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "indexWidth": 1,
+        "originalMode": 0,
+        "instances": [
+          {
+            "mesh": 0,
+            "primitive": 0
+          }
+        ],
+        "finalVertices": 8192,
+        "finalTriangles": 8192,
+        "baseVertices": 122,
+        "baseTriangles": 122,
+        "levels": 5,
+        "quality": [
+          {
+            "error": 0.985,
+            "ratio": 0.015,
+            "primitives": 122
+          },
+          {
+            "error": 0.76,
+            "ratio": 0.24,
+            "estimatedBytes": 471840,
+            "errorGain": 0.22842639593908629,
+            "primitives": 1966
+          },
+          {
+            "error": 0.5,
+            "ratio": 0.5,
+            "estimatedBytes": 983040,
+            "errorGain": 0.34210526315789475,
+            "primitives": 4096
+          },
+          {
+            "error": 0.16000000000000003,
+            "ratio": 0.84,
+            "estimatedBytes": 1651440,
+            "errorGain": 0.6799999999999999,
+            "primitives": 6881
+          },
+          {
+            "error": 0,
+            "ratio": 1,
+            "primitives": 8192
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1,
+            -1,
+            -1
+          ],
+          "max": [
+            1,
+            1,
+            1
+          ]
+        },
+        "attributes": [
+          {
+            "semantic": "POSITION",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SCALE",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:ROTATION",
+            "componentType": 5126,
+            "itemSize": 4,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:OPACITY",
+            "componentType": 5126,
+            "itemSize": 1,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_0_COEF_0",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_0",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_1",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_2",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_0",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_1",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_2",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_3",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_4",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_0",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_1",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_2",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_3",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_4",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_5",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_6",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          }
+        ]
+      }
+    ],
+    "textures": 0,
+    "maxOverhead": 0.05,
+    "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+    "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+    "animationMode": "complete original clips in bootstrap",
+    "bootstrapExtensionPackets": 0,
+    "streamBytes": 1747171,
+    "bootstrapBytes": 29360,
+    "baseGLBBytes": 33376,
+    "geometryPatchBytes": 1717954,
+    "texturePayloadBytes": 0,
+    "latticeTextures": 0,
+    "sourceTextures": 0,
+    "overheadPercent": -9.815984803906385,
+    "sizeBudgetBytes": 2034207,
+    "packets": 7,
+    "directoryBytes": 280,
+    "geometryCodecStats": [
+      {
+        "primitive": 0,
+        "level": 1,
+        "raw": 404095,
+        "selected": 394104,
+        "codecs": {
+          "meshopt": 20,
+          "raw": 1,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 2,
+        "raw": 466286,
+        "selected": 454523,
+        "codecs": {
+          "meshopt": 20,
+          "raw": 1,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 3,
+        "raw": 609702,
+        "selected": 592722,
+        "codecs": {
+          "meshopt": 20,
+          "raw": 1,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 4,
+        "raw": 303088,
+        "selected": 282704,
+        "codecs": {
+          "meshopt": 21,
+          "raw": 1,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      }
+    ],
+    "verification": {
+      "primitives": [
+        {
+          "mesh": 0,
+          "primitive": 0,
+          "attributes": [
+            {
+              "semantic": "POSITION",
+              "hash": "0a97f823c65077c984855acb0c47e88b1647c8a60e9514b33af725f9fe8bca16"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SCALE",
+              "hash": "26f631b30ecf1ec7ec5dfc068c9d601dbd0e28c43d1b51a5d5b347355db0d0af"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:ROTATION",
+              "hash": "d181b573d40a081ff5aac332c29363b3689dc9c28deefdeaedb2f065922874ac"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:OPACITY",
+              "hash": "36b496c6b21f80d3b7f20b8c02a4ac183a7f1e69630b4ed8051339bb52c3a906"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_0_COEF_0",
+              "hash": "83c5d0e448aae40e1a98e9981a9c9f8f44ea998bc883f5d1f9a09acd35edd87e"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_0",
+              "hash": "74985f3e030c4e7a3a420e3f9b505ff024605ef7b7c7e49de1f07c41d7208d01"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_1",
+              "hash": "37916e7065cae3f77cfd76c7a026698f4f961892f32a43c8f1b897bfec70e8a7"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_1_COEF_2",
+              "hash": "72481225c4de070966fcd4bcb68f5f63020a7884a847ad31ca8aa64a6950b876"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_0",
+              "hash": "3d3348d33dce09595e9f7d5b0b53f94d4c0724dd31265e7db85de29eccd45c6c"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_1",
+              "hash": "f9d58688bcf42e00c188fb6e09ee82742b93149399886592977c9362df2087f4"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_2",
+              "hash": "dd8c70f84908192239d152a2e7ae8f2ac4ae1d380ad7ed285da5e76e32989ad7"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_3",
+              "hash": "e09e83d471b2f3f5e8bf9c2c94fad1b16f3e10d3ed31111e15ccd05481d7c1d4"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_2_COEF_4",
+              "hash": "d5a4ffe41bf0c63e5c765ed19b5b65ae79d432111f7ac6138f2f4ddd5056ebca"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_0",
+              "hash": "a0d1d8c886ae44cc6907f54494e865e89c67c81284e3eeea21a2338e6b1430ca"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_1",
+              "hash": "b5ac39a31c8a0cbaf6880a8f86243e72a578102f418eb78cb258d956c488e241"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_2",
+              "hash": "d1a942955cd4b0dfc970e86f5ca7c2076843932cf137cb49cee29f5d7ad7ea4f"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_3",
+              "hash": "5e377195b63083da589da1c546527484e245156d95569b37670e313b0224a4b7"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_4",
+              "hash": "816ffaafcfbda013550272ebd9274e8b0bb7e97b7bde2bbbe6e170896280efb4"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_5",
+              "hash": "bd67201530fd0443a09786c59014ddb38ebc78dbabbc5aa7fbf09b1b6c06293c"
+            },
+            {
+              "semantic": "KHR_gaussian_splatting:SH_DEGREE_3_COEF_6",
+              "hash": "700f74f70c72bb8c27b953187f005300f30e8f620ded67bf6a34b5e2c5a02490"
+            }
+          ],
+          "finalIndicesHash": "0815e0058a24fbb0836439b915726112856d2f040e4a11f458d9fa4f4b6668f5",
+          "originalVertices": 8192,
+          "originalTriangles": 2730.6666666666665
+        }
+      ],
+      "textures": []
+    },
+    "id": "TestGaussianSplats",
+    "kind": "Compatibility fixture",
+    "sourcePage": "/assets/TestGaussianSplats.stats.json",
+    "triangles": 0,
+    "vertices": 8192
+  },
+  {
+    "version": 0,
+    "features": [
+      "primitive-modes",
+      "final-order"
+    ],
+    "conversionSettings": {
+      "textureBaseSize": 16,
+      "geometryBaseRatio": 0.015,
+      "adaptive": true,
+      "initialQuality": "balanced",
+      "geometryCodec": "auto",
+      "textureTiles": true,
+      "tileSize": 128
+    },
+    "name": "Interactive streaming",
+    "levels": 6,
+    "sourceBytes": 352824,
+    "sourceSHA256": "9bf5271ead87fc42b341bec3c81c757603e8dc61ee98e484ce80c33c14312742",
+    "animations": 1,
+    "extensionStrategies": [
+      {
+        "name": "KHR_interactivity",
+        "strategy": "validated execution graph in bootstrap; persistent state bound to refining objects"
+      }
+    ],
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "indexWidth": 3,
+        "originalMode": 4,
+        "instances": [
+          {
+            "mesh": 0,
+            "primitive": 0
+          }
+        ],
+        "finalVertices": 1617,
+        "finalTriangles": 2976,
+        "baseVertices": 87,
+        "baseTriangles": 84,
+        "levels": 6,
+        "quality": [
+          {
+            "error": 0.7449597716331482,
+            "ratio": 0.015,
+            "primitives": 84
+          },
+          {
+            "error": 0.058050114661455154,
+            "ratio": 0.065,
+            "estimatedBytes": 7712,
+            "errorGain": 0.9220761752890442,
+            "primitives": 192
+          },
+          {
+            "error": 0.011915155686438084,
+            "ratio": 0.16,
+            "estimatedBytes": 16036,
+            "errorGain": 0.7947436321887292,
+            "primitives": 475
+          },
+          {
+            "error": 0.005165872164070606,
+            "ratio": 0.35,
+            "estimatedBytes": 32352,
+            "errorGain": 0.5664452651717813,
+            "primitives": 1040
+          },
+          {
+            "error": 0.003381819697096944,
+            "ratio": 0.68,
+            "estimatedBytes": 60360,
+            "errorGain": 0.34535358412118816,
+            "primitives": 2022
+          },
+          {
+            "error": 0,
+            "ratio": 1,
+            "primitives": 2976
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1,
+            -1,
+            -1
+          ],
+          "max": [
+            1,
+            1,
+            1
+          ]
+        },
+        "attributes": [
+          {
+            "semantic": "POSITION",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "NORMAL",
+            "componentType": 5126,
+            "itemSize": 3,
+            "normalized": false
+          },
+          {
+            "semantic": "TEXCOORD_0",
+            "componentType": 5126,
+            "itemSize": 2,
+            "normalized": false
+          }
+        ]
+      }
+    ],
+    "textures": 1,
+    "maxOverhead": 0.05,
+    "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+    "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+    "animationMode": "complete original clips in bootstrap",
+    "bootstrapExtensionPackets": 0,
+    "streamBytes": 313594,
+    "bootstrapBytes": 5796,
+    "baseGLBBytes": 7316,
+    "geometryPatchBytes": 40339,
+    "texturePayloadBytes": 268922,
+    "latticeTextures": 1,
+    "sourceTextures": 0,
+    "overheadPercent": -11.118858127565023,
+    "sizeBudgetBytes": 370465,
+    "packets": 40,
+    "directoryBytes": 1600,
+    "geometryCodecStats": [
+      {
+        "primitive": 0,
+        "level": 1,
+        "raw": 2548,
+        "selected": 2191,
+        "codecs": {
+          "raw": 2,
+          "meshopt": 2,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 2,
+        "raw": 5495,
+        "selected": 4685,
+        "codecs": {
+          "raw": 2,
+          "meshopt": 2,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 3,
+        "raw": 10701,
+        "selected": 9207,
+        "codecs": {
+          "raw": 2,
+          "meshopt": 2,
+          "sequence": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 4,
+        "raw": 18280,
+        "selected": 15926,
+        "codecs": {
+          "raw": 2,
+          "delta": 1,
+          "sequence": 1,
+          "meshopt": 1
+        },
+        "packetCodec": "blocks"
+      },
+      {
+        "primitive": 0,
+        "level": 5,
+        "raw": 20108,
+        "selected": 14420,
+        "codecs": {
+          "raw": 2,
+          "delta": 1,
+          "sequence": 2,
+          "meshopt": 1
+        },
+        "packetCodec": "blocks"
+      }
+    ],
+    "verification": {
+      "primitives": [
+        {
+          "mesh": 0,
+          "primitive": 0,
+          "attributes": [
+            {
+              "semantic": "POSITION",
+              "hash": "58cda8a192b7931a7820f8539ddd00db581ce12ace6087fe1d043e8ce0a28fdd"
+            },
+            {
+              "semantic": "NORMAL",
+              "hash": "58cda8a192b7931a7820f8539ddd00db581ce12ace6087fe1d043e8ce0a28fdd"
+            },
+            {
+              "semantic": "TEXCOORD_0",
+              "hash": "425c0cf73ad295061c2184b3908d0f94d5f445875e80fc058cf7b8edf87534c0"
+            }
+          ],
+          "finalIndicesHash": "d66580e94077613fe731f658deee24023c34d7372df9e5a6acaa47745ce2325d",
+          "originalVertices": 1617,
+          "originalTriangles": 2976
+        }
+      ],
+      "textures": [
+        {
+          "image": 0,
+          "width": 256,
+          "height": 256,
+          "hash": "c02c04e93ec895a3d4034264e12c75f49b90423dfb729a468d5cf029445cb776"
+        }
+      ]
+    },
+    "id": "TestInteractivity",
+    "kind": "Compatibility fixture",
+    "sourcePage": "/assets/TestInteractivity.stats.json",
+    "triangles": 2976,
+    "vertices": 1617
+  }
+]

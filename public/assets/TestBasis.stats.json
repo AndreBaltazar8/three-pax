@@ -1,0 +1,157 @@
+{
+  "version": 0,
+  "features": [
+    "primitive-modes",
+    "final-order"
+  ],
+  "conversionSettings": {
+    "textureBaseSize": 16,
+    "geometryBaseRatio": 0.015,
+    "adaptive": true,
+    "initialQuality": "balanced",
+    "geometryCodec": "auto",
+    "textureTiles": true,
+    "tileSize": 256
+  },
+  "name": "TestBasis",
+  "levels": 2,
+  "sourceBytes": 94336,
+  "sourceSHA256": "adf89c381efca3a961fb8129cdf3cbbb7b48fa781141145aee6c204ebaa0e305",
+  "animations": 0,
+  "extensionStrategies": [
+    {
+      "name": "KHR_texture_basisu",
+      "strategy": "RGBA bootstrap preview; original GPU mip levels streamed with a shared codebook, exact source fallback"
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "indexWidth": 3,
+      "originalMode": 4,
+      "instances": [
+        {
+          "mesh": 0,
+          "primitive": 0
+        }
+      ],
+      "finalVertices": 3,
+      "finalTriangles": 1,
+      "baseVertices": 3,
+      "baseTriangles": 1,
+      "levels": 2,
+      "quality": [
+        {
+          "error": 0,
+          "ratio": 0.015,
+          "primitives": 1
+        },
+        {
+          "error": 0,
+          "ratio": 1,
+          "primitives": 1
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1,
+          -1,
+          0
+        ],
+        "max": [
+          1,
+          1,
+          0
+        ]
+      },
+      "attributes": [
+        {
+          "semantic": "POSITION",
+          "componentType": 5126,
+          "itemSize": 3,
+          "normalized": false
+        },
+        {
+          "semantic": "TEXCOORD_0",
+          "componentType": 5126,
+          "itemSize": 2,
+          "normalized": false
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "importance": 3,
+      "roles": [
+        "baseColorTexture"
+      ],
+      "previewError": 0.025937547870710783,
+      "image": 0,
+      "width": 1024,
+      "height": 1024,
+      "baseWidth": 16,
+      "baseHeight": 16,
+      "levels": 12,
+      "codec": "ktx2-mip"
+    }
+  ],
+  "maxOverhead": 0.05,
+  "textureMode": "budgeted lossless sample lattice; exact source image fallback",
+  "geometryMode": "adaptive attribute-aware stages; lossless blocks and triangle patches",
+  "animationMode": "complete original clips in bootstrap",
+  "bootstrapExtensionPackets": 0,
+  "streamBytes": 96878,
+  "bootstrapBytes": 3431,
+  "baseGLBBytes": 1692,
+  "geometryPatchBytes": 148,
+  "texturePayloadBytes": 93762,
+  "latticeTextures": 1,
+  "sourceTextures": 0,
+  "overheadPercent": 2.694623473541391,
+  "sizeBudgetBytes": 99052,
+  "packets": 15,
+  "directoryBytes": 600,
+  "geometryCodecStats": [
+    {
+      "primitive": 0,
+      "level": 1,
+      "raw": 4,
+      "selected": 4,
+      "codecs": {
+        "raw": 5
+      },
+      "packetCodec": "gzip"
+    }
+  ],
+  "verification": {
+    "primitives": [
+      {
+        "mesh": 0,
+        "primitive": 0,
+        "attributes": [
+          {
+            "semantic": "POSITION",
+            "hash": "79f7a3b42c57393857bd6618d0e16bc46138e3f601a7aae088eb649004962fbb"
+          },
+          {
+            "semantic": "TEXCOORD_0",
+            "hash": "7250a8b97e31a5515fe8d48b760baa052dea5b5ae1c0204b8bc04f47c5de2e55"
+          }
+        ],
+        "finalIndicesHash": "ad5dc1478de06a4c2728ea528bd9361a4b945e92a414bf4d180cedaaeaa5f4cc",
+        "originalVertices": 3,
+        "originalTriangles": 1
+      }
+    ],
+    "textures": [
+      {
+        "image": 0,
+        "width": 1024,
+        "height": 1024,
+        "hash": "adcedb19840e410421215cacf41ab6b6608d39bf4edb317993c66eeb042737eb"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.cache/
+artifacts/
+test-results/
+playwright-report/
+public/decoders/
+public/assets/*
+!public/assets/catalog.json
+!public/assets/BoomBox.*
+!public/assets/TestDiffuseTransmission.*
+!public/assets/TestInteractivity.*
+!public/assets/TestGaussianSplats.*
+!public/assets/TestBasis.*
+*.log

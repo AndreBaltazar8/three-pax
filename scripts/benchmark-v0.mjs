@@ -1,0 +1,7 @@
+import {chromium} from '@playwright/test';import fs from 'node:fs/promises';import {existsSync} from 'node:fs';
+const browser=await chromium.launch({headless:true,...(existsSync('/home/andre/.local/bin/google-chrome')?{executablePath:'/home/andre/.local/bin/google-chrome'}:{}),args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:1100}});const records=[];
+try{await page.goto(process.env.BASE_URL||'http://localhost:4186');await page.waitForFunction(()=>!!window.lab);await page.selectOption('#rate','8192');await page.selectOption('#latency','80');
+for(const asset of ['BoomBox','BrainStem','FlightHelmet','FlightHelmetOptimized'])for(let repeat=0;repeat<3;repeat++){
+ await page.selectOption('#asset',asset);const r=await page.evaluate(()=>window.lab.run());if(r.metrics.baseline.error||r.metrics.progressive.error)throw new Error(JSON.stringify(r.metrics));records.push({...r,repeat});console.log(asset,repeat,Object.fromEntries(Object.entries(r.metrics).map(([k,m])=>[k,{first:m.first,complete:m.complete,bytes:m.bytes,stalls:m.stallsOver50ms}])));
+}await fs.writeFile('artifacts/v0-benchmark.json',JSON.stringify({environment:'Chromium headless, SwiftShader software GPU; shared tab, 8 MiB/s independently paced per stream, 80 ms per request; 3 sequential runs; not hardware GPU claims',records},null,2));}finally{await browser.close();}
