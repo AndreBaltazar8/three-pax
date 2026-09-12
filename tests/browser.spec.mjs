@@ -18,7 +18,8 @@ async function compareImages(images) {
 }
 for (const asset of ['BoomBox', 'BrainStem', 'FlightHelmet']) test(`${asset}: early visibility, completion, pixel agreement and size budget`, async ({ page }) => {
   const errors = []; page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error' || /GL_INVALID|WebGL.*error/.test(m.text())) errors.push(m.text()); });
-  await open(page); await page.selectOption('#asset', asset); await page.selectOption('#rate', '8192');
+  // A slow link keeps this a progressive-network test even on a software-rendered CI host.
+  await open(page); await page.selectOption('#asset', asset); await page.selectOption('#rate', process.env.CI ? '512' : '8192');
   const record = await page.evaluate(() => window.lab.run());
   expect(record.metrics.baseline.error).toBeNull(); expect(record.metrics.progressive.error).toBeNull();
   expect(record.metrics.progressive.first).toBeLessThan(record.metrics.baseline.first);

@@ -89,6 +89,11 @@ npm run assets:optimized
 npm run test:browser      # keep npm run dev running in another terminal
 ```
 
+CI uses 512 KiB/s for the first-frame streaming assertion so shader compilation on
+a slow software renderer does not outlast the entire network transfer. Recorded
+benchmarks keep their explicitly reported rates; tests do not establish timing
+guarantees for arbitrary machines.
+
 `dist/` alone does not provide the benchmark's `/stream/` endpoint. Use the included
 Node server for throttled comparisons. A production app can serve static PAX files
 from a normal asset host.
