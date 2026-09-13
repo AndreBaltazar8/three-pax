@@ -121,3 +121,22 @@ test("reused tile buffers match reference pixels with every PNG row filter", () 
   assert.equal(workspace.metrics.patchReuses, 4);
   assert.equal(workspace.images.size, 0);
 });
+
+
+test("a real frame renews budgets after asynchronous waits without extra yielding", async () => {
+  let next, yields = 0, cancelled;
+  const budget = new FrameBudget({
+    uploadBudgetBytes: 100,
+    requestFrame: callback => { next = callback; return 42; },
+    cancelFrame: handle => { cancelled = handle; },
+    yieldFrame: async () => { yields++; next(); },
+  });
+  await budget.run(() => {}, 60);
+  next(); // Network or worker awaited while a frame passed.
+  await budget.run(() => {}, 60);
+  assert.equal(yields, 0);
+  await budget.run(() => {}, 60); // Same frame still enforces the limit.
+  assert.equal(yields, 1);
+  budget.dispose();
+  assert.equal(cancelled, 42);
+});

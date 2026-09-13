@@ -7,6 +7,8 @@ export class FrameBudget {
     metrics = {},
     now = () => performance.now(),
     yieldFrame,
+    requestFrame = globalThis.requestAnimationFrame?.bind(globalThis),
+    cancelFrame = globalThis.cancelAnimationFrame?.bind(globalThis),
   } = {}) {
     if (
       !Number.isFinite(frameBudgetMs) ||
@@ -21,7 +23,10 @@ export class FrameBudget {
       signal,
       metrics,
       now,
+      requestFrame,
+      cancelFrame,
     });
+    this.resetHandle = null;
     this.spent = 0;
     this.bytes = 0;
     this.yieldFrame =
@@ -51,6 +56,10 @@ export class FrameBudget {
       uploadBytes: 0,
     });
   }
+  dispose() {
+    if (this.resetHandle !== null) this.cancelFrame?.(this.resetHandle);
+    this.resetHandle = null;
+  }
   async run(task, uploadBytes = 0) {
     this.signal?.throwIfAborted();
     if (
@@ -64,6 +73,14 @@ export class FrameBudget {
       this.bytes = 0;
       this.metrics.budgetYields++;
     }
+    // A network/worker wait can span a frame without an explicit budget yield.
+    // Expire that frame's allowance instead of charging the next frame for it.
+    if (this.frameBudgetMs && this.requestFrame && this.resetHandle === null)
+      this.resetHandle = this.requestFrame(() => {
+        this.resetHandle = null;
+        this.spent = 0;
+        this.bytes = 0;
+      });
     const start = this.now();
     const value = task();
     const elapsed = this.now() - start;

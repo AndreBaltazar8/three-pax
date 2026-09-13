@@ -133,6 +133,7 @@ export class PAXLoader {
     } catch (error) {
       decoder?.dispose();
       lifetime.abort();
+      budget.dispose();
       throw error;
     }
     let manifest,
@@ -889,6 +890,7 @@ export class PAXLoader {
     let busy = false;
     const dispose = () => {
       lifetime.abort();
+      budget.dispose();
       decoder?.dispose();
       gltf?.interactivity?.dispose();
       if (gltf && !sceneExposed) {
@@ -940,7 +942,7 @@ export class PAXLoader {
       if (complete) await notify("onComplete", { kind: "complete" });
       if (decoder) Object.assign(metrics, await decoder.run("stats", {}));
       else Object.assign(metrics, tileWorkspace.metrics);
-      if (!range) decoder?.dispose();
+      if (!range) { decoder?.dispose(); budget.dispose(); }
       return result();
     } catch (error) {
       dispose();

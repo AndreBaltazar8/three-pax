@@ -18,6 +18,8 @@ for (const asset of ["TestInteractivity", "TestMorph"])
     await page.goto(`/examples/profile.html?asset=${asset}&format=pax`);
     const report = await page.evaluate(() => window.profileDone);
     expect(errors).toEqual([]);
+    if (process.env.BACKEND && process.env.BACKEND !== "swiftshader")
+      expect(report.gpu.renderer).not.toMatch(/swiftshader|llvmpipe|software/i);
     expect(report.geometryReplacements).toBe(0);
     expect(report.counts.deleteBuffer || 0).toBe(0);
     expect(report.counts.deleteTexture || 0).toBe(0);

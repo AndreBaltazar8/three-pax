@@ -14,6 +14,21 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(480, 360);
 const gl = renderer.getContext();
+const debug = gl.getExtension("WEBGL_debug_renderer_info");
+const gpu = { renderer: debug ? gl.getParameter(debug.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER), vendor: debug ? gl.getParameter(debug.UNMASKED_VENDOR_WEBGL) : gl.getParameter(gl.VENDOR) };
+const timer = gl.getExtension("EXT_disjoint_timer_query_webgl2");
+const pendingQueries = [], gpuTimes = [], settledGpuTimes = [];
+let completedAt = null;
+const settledGaps = [];
+let firstRenderedMs = null;
+function collectQueries() {
+  const disjoint = timer && gl.getParameter(timer.GPU_DISJOINT_EXT);
+  while (pendingQueries.length && (disjoint || gl.getQueryParameter(pendingQueries[0].query, gl.QUERY_RESULT_AVAILABLE))) {
+    const { query, settled } = pendingQueries.shift();
+    if (!disjoint) (settled ? settledGpuTimes : gpuTimes).push(gl.getQueryParameter(query, gl.QUERY_RESULT) / 1e6);
+    gl.deleteQuery(query);
+  }
+}
 const counts = {},
   times = {},
   sizes = {};
@@ -67,11 +82,16 @@ const gaps = [],
   start = performance.now();
 function frame(now) {
   if (stopped) return;
-  if (first !== null && last !== null) gaps.push(now - last);
+  if (first !== null && last !== null) (completedAt === null ? gaps : settledGaps).push(now - last);
   last = now;
   mixer?.update(1 / 60);
+  collectQueries();
+  const query = first !== null && timer && pendingQueries.length < 8 ? gl.createQuery() : null;
+  if (query) gl.beginQuery(timer.TIME_ELAPSED_EXT, query);
   const t = performance.now();
   renderer.render(scene, camera);
+  if (query) { gl.endQuery(timer.TIME_ELAPSED_EXT); pendingQueries.push({ query, settled: completedAt !== null }); }
+  if (first !== null && firstRenderedMs === null) firstRenderedMs = performance.now() - start;
   renderTimes.push(performance.now() - t);
   frameCount++;
   peakHeap = Math.max(peakHeap, performance.memory?.usedJSHeapSize || 0);
@@ -81,8 +101,7 @@ requestAnimationFrame(frame);
 let atBase,
   identities,
   geometryReplacements = 0;
-const onScene = (gltf) => {
-  scene.add(gltf.scene);
+const onScene = async (gltf) => {
   const box = new THREE.Box3().setFromObject(gltf.scene),
     size = box.getSize(new THREE.Vector3()).length() || 1,
     center = box.getCenter(new THREE.Vector3());
@@ -95,6 +114,8 @@ const onScene = (gltf) => {
     mixer = new THREE.AnimationMixer(gltf.scene);
     for (const a of gltf.animations) mixer.clipAction(a).play();
   }
+  if (params.get("warmup") === "1") await renderer.compileAsync(gltf.scene, camera, scene);
+  scene.add(gltf.scene);
   first = performance.now() - start;
   identities = new Map();
   gltf.scene.traverse((o) => {
@@ -126,10 +147,12 @@ window.profileDone = (async () => {
       createGLTFLoader(),
       renderer,
     ).parseAsync(buffer, "");
-    onScene(gltf);
+    await onScene(gltf);
     result = { gltf };
   }
   const complete = performance.now() - start;
+  completedAt = complete;
+  await new Promise(r => setTimeout(r, 500));
   await new Promise((r) =>
     requestAnimationFrame(() => requestAnimationFrame(r)),
   );
@@ -150,7 +173,13 @@ window.profileDone = (async () => {
   const report = {
     asset,
     format,
+    gpu,
     firstMs: first,
+    firstRenderedMs,
+    shaderWarmup: params.get("warmup") === "1",
+    settledFrameGaps: { p95: percentile(settledGaps, 0.95), max: Math.max(0, ...settledGaps) },
+    settledRenderGpuMs: { samples: settledGpuTimes.length, p95: percentile(settledGpuTimes, 0.95), max: Math.max(0, ...settledGpuTimes) },
+    renderGpuMs: { supported: !!timer, samples: gpuTimes.length, p95: percentile(gpuTimes, 0.95), max: Math.max(0, ...gpuTimes) },
     completeMs: complete,
     frameCount,
     frameGaps: {
@@ -176,6 +205,7 @@ window.profileDone = (async () => {
     null,
     2,
   );
+  for (const { query } of pendingQueries) gl.deleteQuery(query);
   result.dispose?.();
   return report;
 })().catch((error) => {

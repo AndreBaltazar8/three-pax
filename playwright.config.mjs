@@ -4,6 +4,6 @@ const chrome = process.env.CHROME_PATH || (existsSync('/home/andre/.local/bin/go
 export default defineConfig({
   testDir: './tests', testMatch: ['**/browser.spec.mjs','**/examples.spec.mjs','**/resources.spec.mjs'], timeout: 120000, workers: 1,
   use: { baseURL: process.env.BASE_URL || 'http://localhost:4186', viewport: { width: 1440, height: 1100 }, headless: true,
-    launchOptions: { executablePath: chrome, args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] } },
+    launchOptions: { executablePath: chrome, args: ['--no-sandbox', '--use-gl=angle', `--use-angle=${process.env.BACKEND || 'swiftshader'}`, '--enable-unsafe-swiftshader'] } },
   reporter: [['list']],
 });

@@ -1,0 +1,1224 @@
+{
+  "environment": {
+    "backend": "vulkan",
+    "browser": "141.0.7390.107",
+    "gpu": {
+      "devices": [
+        {
+          "vendorId": 4318,
+          "deviceId": 9860,
+          "vendorString": "",
+          "deviceString": "",
+          "driverVendor": "NVIDIA",
+          "driverVersion": "580.95.5.0"
+        },
+        {
+          "vendorId": 32902,
+          "deviceId": 42880,
+          "vendorString": "",
+          "deviceString": "",
+          "driverVendor": "",
+          "driverVersion": ""
+        }
+      ],
+      "auxAttributes": {
+        "amdSwitchable": false,
+        "canSupportThreadedTextureMailbox": false,
+        "directRenderingVersion": "",
+        "displayType": "ANGLE_VULKAN",
+        "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_image GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_logic_op GL_ANGLE_memory_object_flags GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_read_only_depth_stencil_feedback_loops GL_ANGLE_relaxed_vertex_attribute_type GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_robust_fragment_shader_output GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_ANGLE_vulkan_image GL_ARM_rgba8 GL_ARM_shader_framebuffer_fetch GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_color_buffer_float_rgb GL_CHROMIUM_color_buffer_float_rgba GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_buffer_storage GL_EXT_clear_texture GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_multisample_compatibility GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_sRGB_write_control GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_non_constant_global_initializers GL_EXT_shader_texture_lod GL_EXT_shadow_samplers GL_EXT_texture_border_clamp GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_debug GL_KHR_robustness GL_NV_depth_buffer_float2 GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_NV_polygon_mode GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_copy_image GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_shading GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_array_object GL_OES_vertex_half_float GL_QCOM_shading_rate ",
+        "glImplementationParts": "(gl=egl-angle,angle=vulkan)",
+        "glRenderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA-580.95.5.0)",
+        "glResetNotificationStrategy": 33362,
+        "glVendor": "Google Inc. (NVIDIA)",
+        "glVersion": "OpenGL ES 2.0.0 (ANGLE 2.1.26018 git hash: bb55ea10fcef)",
+        "glWsExtensions": "EGL_EXT_create_context_robustness EGL_ANGLE_surface_orientation EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_EXT_image_gl_colorspace EGL_KHR_gl_colorspace EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_fence_sync EGL_KHR_wait_sync EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANDROID_native_fence_sync EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_IMG_context_priority EGL_KHR_create_context_no_error EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_KHR_reusable_sync EGL_EXT_buffer_age EGL_KHR_mutable_render_buffer EGL_ANGLE_create_surface_swap_interval EGL_ANGLE_vulkan_image EGL_KHR_partial_update EGL_ANGLE_global_fence_sync EGL_ANGLE_memory_usage_report ",
+        "glWsVendor": "Google Inc. (NVIDIA)",
+        "glWsVersion": "1.5 (ANGLE 2.1.26018 git hash: bb55ea10fcef)",
+        "hardwareSupportsVulkan": false,
+        "inProcessGpu": false,
+        "initializationTime": 0.604734,
+        "isAsan": false,
+        "isClangCoverage": false,
+        "jpegDecodeAcceleratorSupported": false,
+        "maxMsaaSamples": "8",
+        "optimus": true,
+        "passthroughCmdDecoder": true,
+        "pixelShaderVersion": "1.00",
+        "processCrashCount": 0,
+        "sandboxed": false,
+        "skiaBackendType": "GaneshGL",
+        "subpixelFontRendering": true,
+        "targetCpuBits": 64,
+        "vertexShaderVersion": "1.00",
+        "visibilityCallbackCallCount": 0
+      },
+      "featureStatus": {
+        "2d_canvas": "enabled",
+        "direct_rendering_display_compositor": "disabled_off_ok",
+        "gpu_compositing": "enabled",
+        "multiple_raster_threads": "enabled_on",
+        "opengl": "enabled_on",
+        "rasterization": "enabled",
+        "raw_draw": "disabled_off_ok",
+        "skia_graphite": "disabled_off",
+        "trees_in_viz": "disabled_off",
+        "video_decode": "enabled",
+        "video_encode": "disabled_software",
+        "vulkan": "disabled_off",
+        "webgl": "enabled",
+        "webgl2": "enabled",
+        "webgpu": "disabled_off",
+        "webnn": "disabled_off"
+      },
+      "driverBugWorkarounds": [
+        "enable_webgl_timer_query_extensions",
+        "exit_on_context_lost",
+        "disabled_extension_GL_KHR_blend_equation_advanced",
+        "disabled_extension_GL_KHR_blend_equation_advanced_coherent"
+      ],
+      "videoDecoding": [],
+      "videoEncoding": [],
+      "imageDecoding": []
+    },
+    "rateKiBps": 8192,
+    "resolution": [
+      480,
+      360
+    ],
+    "notes": "Fresh page per run; heap excludes GPU and workers; WebGL call times are CPU submission; timer queries measure render GPU work only, excluding loader uploads outside rendering."
+  },
+  "records": [
+    {
+      "asset": "BoomBox",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 147.40000009536743,
+      "firstRenderedMs": 159,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 106,
+        "p95": 0.410624,
+        "max": 0.861184
+      },
+      "completeMs": 1733,
+      "frameCount": 107,
+      "frameGaps": {
+        "p95": 16.799999999999955,
+        "max": 16.800000000000182,
+        "over16_7": 46,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 0.20000028610229492,
+        "max": 11.199999809265137
+      },
+      "counts": {
+        "createTexture": 6,
+        "texStorage2D": 6,
+        "texSubImage2D": 1926,
+        "generateMipmap": 8,
+        "createBuffer": 5,
+        "bufferData": 5,
+        "bufferSubData": 35,
+        "deleteTexture": 1
+      },
+      "atBase": {
+        "createTexture": 3,
+        "texStorage2D": 3,
+        "texSubImage2D": 3,
+        "generateMipmap": 3
+      },
+      "times": {
+        "createTexture": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 82.69999980926514,
+        "generateMipmap": 0.09999990463256836,
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 0,
+        "bufferSubData": 0.09999990463256836,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 244032,
+        "bufferSubData": 401392
+      },
+      "peakHeapBytes": 101146747,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 1,
+        "textureRectUploads": 1920,
+        "geometryReservedBytes": 268181,
+        "textureReservedBytes": 50331648,
+        "cpuWorkMs": 163.19999885559082,
+        "maxTaskMs": 20.59999990463257,
+        "maxSliceMs": 21,
+        "budgetYields": 69,
+        "uploadBytes": 570907168,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 194,
+        "tileAllocatedBytes": 50855936,
+        "patchReuses": 1919
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "BoomBox",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 142.2999997138977,
+      "firstRenderedMs": 155,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 109,
+        "p95": 1.41824,
+        "max": 1.436672
+      },
+      "completeMs": 1785,
+      "frameCount": 110,
+      "frameGaps": {
+        "p95": 16.799999999999955,
+        "max": 16.799999999999955,
+        "over16_7": 51,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 0.3000001907348633,
+        "max": 5.300000190734863
+      },
+      "counts": {
+        "createTexture": 6,
+        "texStorage2D": 6,
+        "texSubImage2D": 1926,
+        "generateMipmap": 8,
+        "createBuffer": 5,
+        "bufferData": 5,
+        "bufferSubData": 36,
+        "deleteTexture": 1
+      },
+      "atBase": {
+        "createTexture": 3,
+        "texStorage2D": 3,
+        "texSubImage2D": 3,
+        "generateMipmap": 3
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 94.10000133514404,
+        "generateMipmap": 0,
+        "createBuffer": 0,
+        "bufferData": 0.09999990463256836,
+        "bufferSubData": 0,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 244032,
+        "bufferSubData": 457440
+      },
+      "peakHeapBytes": 100917484,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 1,
+        "textureRectUploads": 1920,
+        "geometryReservedBytes": 268181,
+        "textureReservedBytes": 50331648,
+        "cpuWorkMs": 160.00000143051147,
+        "maxTaskMs": 15.399999618530273,
+        "maxSliceMs": 15.399999618530273,
+        "budgetYields": 71,
+        "uploadBytes": 570907168,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 194,
+        "tileAllocatedBytes": 50855936,
+        "patchReuses": 1919
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "BoomBox",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 152.80000019073486,
+      "firstRenderedMs": 174.69999980926514,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 111,
+        "p95": 2.776064,
+        "max": 5.05344
+      },
+      "completeMs": 1819.9000000953674,
+      "frameCount": 112,
+      "frameGaps": {
+        "p95": 16.700000000000045,
+        "max": 16.800000000000182,
+        "over16_7": 44,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 0.3000001907348633,
+        "max": 13.099999904632568
+      },
+      "counts": {
+        "createTexture": 6,
+        "texStorage2D": 6,
+        "texSubImage2D": 1926,
+        "generateMipmap": 8,
+        "createBuffer": 5,
+        "bufferData": 5,
+        "bufferSubData": 36,
+        "deleteTexture": 1
+      },
+      "atBase": {
+        "createTexture": 3,
+        "texStorage2D": 3,
+        "texSubImage2D": 3,
+        "generateMipmap": 3
+      },
+      "times": {
+        "createTexture": 0.10000038146972656,
+        "texStorage2D": 0.10000038146972656,
+        "texSubImage2D": 87.89999437332153,
+        "generateMipmap": 0,
+        "createBuffer": 0,
+        "bufferData": 0.19999980926513672,
+        "bufferSubData": 0,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 244032,
+        "bufferSubData": 473824
+      },
+      "peakHeapBytes": 101105163,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 1,
+        "textureRectUploads": 1920,
+        "geometryReservedBytes": 268181,
+        "textureReservedBytes": 50331648,
+        "cpuWorkMs": 155.70000076293945,
+        "maxTaskMs": 15,
+        "maxSliceMs": 15,
+        "budgetYields": 71,
+        "uploadBytes": 570907168,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 194,
+        "tileAllocatedBytes": 50855936,
+        "patchReuses": 1919
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "BoomBox",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 1362.2999997138977,
+      "firstRenderedMs": 1434.1999998092651,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 83,
+        "p95": 0.002048,
+        "max": 0.01536
+      },
+      "completeMs": 1362.3999996185303,
+      "frameCount": 85,
+      "frameGaps": {
+        "p95": 66.70000000000005,
+        "max": 66.70000000000005,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.19999980926513672,
+        "max": 67.90000009536743
+      },
+      "counts": {
+        "createBuffer": 5,
+        "bufferData": 5,
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 4
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.2999997138977051,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 59.70000076293945,
+        "generateMipmap": 0
+      },
+      "sizes": {
+        "bufferData": 207816
+      },
+      "peakHeapBytes": 73955844,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "BoomBox",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 1360.7000002861023,
+      "firstRenderedMs": 1426.0999999046326,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 82,
+        "p95": 1.831936,
+        "max": 1.908736
+      },
+      "completeMs": 1360.8000001907349,
+      "frameCount": 84,
+      "frameGaps": {
+        "p95": 66.59999999999991,
+        "max": 66.59999999999991,
+        "over16_7": 2,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.19999980926513672,
+        "max": 65.2999997138977
+      },
+      "counts": {
+        "createBuffer": 5,
+        "bufferData": 5,
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 4
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.20000028610229492,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 58.19999980926514,
+        "generateMipmap": 0.09999990463256836
+      },
+      "sizes": {
+        "bufferData": 207816
+      },
+      "peakHeapBytes": 73958852,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "BoomBox",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 1357.7999997138977,
+      "firstRenderedMs": 1424,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 82,
+        "p95": 0.002048,
+        "max": 1.846272
+      },
+      "completeMs": 1357.9000000953674,
+      "frameCount": 84,
+      "frameGaps": {
+        "p95": 66.59999999999991,
+        "max": 66.59999999999991,
+        "over16_7": 2,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.20000028610229492,
+        "max": 66.09999990463257
+      },
+      "counts": {
+        "createBuffer": 5,
+        "bufferData": 5,
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 4
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.20000028610229492,
+        "createTexture": 0.19999980926513672,
+        "texStorage2D": 0.09999990463256836,
+        "texSubImage2D": 59.30000019073486,
+        "generateMipmap": 0
+      },
+      "sizes": {
+        "bufferData": 207816
+      },
+      "peakHeapBytes": 73957772,
+      "geometryReplacements": 0,
+      "repeat": 2
+    },
+    {
+      "asset": "BrainStem",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 97.2000002861023,
+      "firstRenderedMs": 129.60000038146973,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 19,
+        "p95": 21.44768,
+        "max": 21.44768
+      },
+      "completeMs": 298.6000003814697,
+      "frameCount": 20,
+      "frameGaps": {
+        "p95": 33.400000000000006,
+        "max": 33.400000000000006,
+        "over16_7": 3,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 31.600000381469727,
+        "max": 31.600000381469727
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 15,
+        "bufferSubData": 1521
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.4999995231628418,
+        "bufferData": 0.9999990463256836,
+        "createTexture": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 0,
+        "bufferSubData": 2.5
+      },
+      "sizes": {
+        "bufferData": 2379624,
+        "bufferSubData": 4996888
+      },
+      "peakHeapBytes": 53475632,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 2626369,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 14,
+        "maxTaskMs": 0.2999997138977051,
+        "maxSliceMs": 2.0999999046325684,
+        "budgetYields": 6,
+        "uploadBytes": 4890600,
+        "networkQueuePeakBytes": 872501,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "BrainStem",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 93.5,
+      "firstRenderedMs": 112.40000009536743,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 16,
+        "p95": 7.796736,
+        "max": 7.796736
+      },
+      "completeMs": 252.5,
+      "frameCount": 17,
+      "frameGaps": {
+        "p95": 33.30000000000001,
+        "max": 33.30000000000001,
+        "over16_7": 5,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 18.199999809265137,
+        "max": 18.199999809265137
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 13,
+        "bufferSubData": 1514
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 1.799999713897705,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0,
+        "bufferSubData": 2.1000008583068848
+      },
+      "sizes": {
+        "bufferData": 2379624,
+        "bufferSubData": 5067648
+      },
+      "peakHeapBytes": 52553600,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 2626369,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 14.09999704360962,
+        "maxTaskMs": 0.3000001907348633,
+        "maxSliceMs": 2.09999942779541,
+        "budgetYields": 6,
+        "uploadBytes": 4890600,
+        "networkQueuePeakBytes": 524288,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "BrainStem",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 95.80000019073486,
+      "firstRenderedMs": 119.60000038146973,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 17,
+        "p95": 13.728768,
+        "max": 13.728768
+      },
+      "completeMs": 264.90000009536743,
+      "frameCount": 18,
+      "frameGaps": {
+        "p95": 33.30000000000001,
+        "max": 33.30000000000001,
+        "over16_7": 3,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 23.200000286102295,
+        "max": 23.200000286102295
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 14,
+        "bufferSubData": 1485
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.3000001907348633,
+        "bufferData": 1.400001049041748,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.20000076293945312,
+        "bufferSubData": 2.1000003814697266
+      },
+      "sizes": {
+        "bufferData": 2379624,
+        "bufferSubData": 5009136
+      },
+      "peakHeapBytes": 52649336,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 2626369,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 12.30000114440918,
+        "maxTaskMs": 0.20000028610229492,
+        "maxSliceMs": 2.09999942779541,
+        "budgetYields": 6,
+        "uploadBytes": 4890600,
+        "networkQueuePeakBytes": 655360,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "BrainStem",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 415.80000019073486,
+      "firstRenderedMs": 433.5,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 25,
+        "p95": 0.002048,
+        "max": 0.014336
+      },
+      "completeMs": 416,
+      "frameCount": 27,
+      "frameGaps": {
+        "p95": 16.699999999999932,
+        "max": 16.699999999999932,
+        "over16_7": 0,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 1.8000001907348633,
+        "max": 16.899999618530273
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 3
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.40000009536743164,
+        "bufferData": 0.6999998092651367,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.09999990463256836
+      },
+      "sizes": {
+        "bufferData": 2009628
+      },
+      "peakHeapBytes": 46354981,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "BrainStem",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 415.7000002861023,
+      "firstRenderedMs": 433.2000002861023,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 25,
+        "p95": 0.003072,
+        "max": 2.285568
+      },
+      "completeMs": 415.80000019073486,
+      "frameCount": 27,
+      "frameGaps": {
+        "p95": 33.39999999999998,
+        "max": 33.39999999999998,
+        "over16_7": 2,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 1.5999999046325684,
+        "max": 16.700000286102295
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 3
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.7999992370605469,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0
+      },
+      "sizes": {
+        "bufferData": 2009628
+      },
+      "peakHeapBytes": 45455025,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "BrainStem",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 418.5,
+      "firstRenderedMs": 436,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 24,
+        "p95": 0.002048,
+        "max": 0.01536
+      },
+      "completeMs": 418.69999980926514,
+      "frameCount": 26,
+      "frameGaps": {
+        "p95": 33.400000000000034,
+        "max": 33.400000000000034,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 1.6999998092651367,
+        "max": 16.700000286102295
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 3
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 1.0000004768371582,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0
+      },
+      "sizes": {
+        "bufferData": 2009628
+      },
+      "peakHeapBytes": 46275381,
+      "geometryReplacements": 0,
+      "repeat": 2
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 236.39999961853027,
+      "firstRenderedMs": 342.69999980926514,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 364,
+        "p95": 3.30752,
+        "max": 85.081088
+      },
+      "completeMs": 6088.89999961853,
+      "frameCount": 365,
+      "frameGaps": {
+        "p95": 16.700000000000728,
+        "max": 83.30000000000001,
+        "over16_7": 95,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.5,
+        "max": 90.69999980926514
+      },
+      "counts": {
+        "createTexture": 27,
+        "texStorage2D": 26,
+        "texSubImage2D": 1498,
+        "generateMipmap": 380,
+        "createBuffer": 30,
+        "bufferData": 30,
+        "texImage2D": 1,
+        "bufferSubData": 164,
+        "deleteTexture": 10
+      },
+      "atBase": {
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 5
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 200.10000324249268,
+        "generateMipmap": 0.40000009536743164,
+        "createBuffer": 0,
+        "bufferData": 1.5999999046325684,
+        "texImage2D": 0,
+        "bufferSubData": 0.7000002861022949,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 3795480,
+        "bufferSubData": 6332144
+      },
+      "peakHeapBytes": 101474203,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 10,
+        "textureRectUploads": 1472,
+        "geometryReservedBytes": 4174440,
+        "textureReservedBytes": 46137344,
+        "cpuWorkMs": 271.4000029563904,
+        "maxTaskMs": 20,
+        "maxSliceMs": 20,
+        "budgetYields": 72,
+        "uploadBytes": 607344356,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 178,
+        "tileAllocatedBytes": 46661632,
+        "patchReuses": 1471
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 220.5,
+      "firstRenderedMs": 256.30000019073486,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 369,
+        "p95": 3.43552,
+        "max": 9.947136
+      },
+      "completeMs": 6108,
+      "frameCount": 370,
+      "frameGaps": {
+        "p95": 16.700000000000728,
+        "max": 16.800000000000182,
+        "over16_7": 101,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 0.5,
+        "max": 20.300000190734863
+      },
+      "counts": {
+        "createTexture": 27,
+        "texStorage2D": 26,
+        "texSubImage2D": 1498,
+        "generateMipmap": 386,
+        "createBuffer": 30,
+        "bufferData": 30,
+        "texImage2D": 1,
+        "bufferSubData": 162,
+        "deleteTexture": 10
+      },
+      "atBase": {
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 5
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 191.3000044822693,
+        "generateMipmap": 0.3000001907348633,
+        "createBuffer": 0,
+        "bufferData": 1,
+        "texImage2D": 0,
+        "bufferSubData": 0.4999995231628418,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 3795480,
+        "bufferSubData": 6037232
+      },
+      "peakHeapBytes": 108722353,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 10,
+        "textureRectUploads": 1472,
+        "geometryReservedBytes": 4174440,
+        "textureReservedBytes": 46137344,
+        "cpuWorkMs": 258.20000314712524,
+        "maxTaskMs": 16.40000009536743,
+        "maxSliceMs": 16.40000009536743,
+        "budgetYields": 71,
+        "uploadBytes": 607344356,
+        "networkQueuePeakBytes": 3211264,
+        "tileBufferAllocations": 178,
+        "tileAllocatedBytes": 46661632,
+        "patchReuses": 1471
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "pax",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 227.09999990463257,
+      "firstRenderedMs": 261.59999990463257,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 367,
+        "p95": 3.422208,
+        "max": 5.761024
+      },
+      "completeMs": 6088.799999713898,
+      "frameCount": 368,
+      "frameGaps": {
+        "p95": 16.700000000000728,
+        "max": 16.800000000000182,
+        "over16_7": 103,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 0.5,
+        "max": 18.90000009536743
+      },
+      "counts": {
+        "createTexture": 27,
+        "texStorage2D": 26,
+        "texSubImage2D": 1498,
+        "generateMipmap": 384,
+        "createBuffer": 30,
+        "bufferData": 30,
+        "texImage2D": 1,
+        "bufferSubData": 162,
+        "deleteTexture": 10
+      },
+      "atBase": {
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 5
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 192.7999973297119,
+        "generateMipmap": 0.40000009536743164,
+        "createBuffer": 0,
+        "bufferData": 1.0000004768371582,
+        "texImage2D": 0,
+        "bufferSubData": 0.5999999046325684,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 3795480,
+        "bufferSubData": 5938928
+      },
+      "peakHeapBytes": 114682575,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 10,
+        "textureRectUploads": 1472,
+        "geometryReservedBytes": 4174440,
+        "textureReservedBytes": 46137344,
+        "cpuWorkMs": 258.20000076293945,
+        "maxTaskMs": 15.5,
+        "maxSliceMs": 15.5,
+        "budgetYields": 72,
+        "uploadBytes": 607344356,
+        "networkQueuePeakBytes": 3145728,
+        "tileBufferAllocations": 178,
+        "tileAllocatedBytes": 46661632,
+        "patchReuses": 1471
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 6044,
+      "firstRenderedMs": 6268.800000190735,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 357,
+        "p95": 1.759232,
+        "max": 2.16576
+      },
+      "completeMs": 6044.099999904633,
+      "frameCount": 359,
+      "frameGaps": {
+        "p95": 283.3000000000002,
+        "max": 283.3000000000002,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.19999980926513672,
+        "max": 224.7000002861023
+      },
+      "counts": {
+        "createBuffer": 30,
+        "bufferData": 30,
+        "createTexture": 17,
+        "texImage2D": 1,
+        "generateMipmap": 18,
+        "texStorage2D": 16,
+        "texSubImage2D": 16
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 1.5,
+        "createTexture": 0,
+        "texImage2D": 0.10000038146972656,
+        "generateMipmap": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 197
+      },
+      "sizes": {
+        "bufferData": 3227148
+      },
+      "peakHeapBytes": 176547121,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 6041.199999809265,
+      "firstRenderedMs": 6269.699999809265,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 357,
+        "p95": 1.831936,
+        "max": 2.311168
+      },
+      "completeMs": 6041.299999713898,
+      "frameCount": 359,
+      "frameGaps": {
+        "p95": 283.3000000000002,
+        "max": 283.3000000000002,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.19999980926513672,
+        "max": 228.40000009536743
+      },
+      "counts": {
+        "createBuffer": 30,
+        "bufferData": 30,
+        "createTexture": 17,
+        "texImage2D": 1,
+        "generateMipmap": 18,
+        "texStorage2D": 16,
+        "texSubImage2D": 16
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 1.6999998092651367,
+        "createTexture": 0,
+        "texImage2D": 0,
+        "generateMipmap": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 188.50000047683716
+      },
+      "sizes": {
+        "bufferData": 3227148
+      },
+      "peakHeapBytes": 178867941,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "glb",
+      "gpu": {
+        "renderer": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA NVIDIA GeForce RTX 4090 (0x00002684)), NVIDIA)",
+        "vendor": "Google Inc. (NVIDIA)"
+      },
+      "firstMs": 6019.700000286102,
+      "firstRenderedMs": 6235.700000286102,
+      "renderGpuMs": {
+        "supported": true,
+        "samples": 357,
+        "p95": 0.002048,
+        "max": 3.314688
+      },
+      "completeMs": 6019.900000095367,
+      "frameCount": 359,
+      "frameGaps": {
+        "p95": 250,
+        "max": 250,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.10000038146972656,
+        "max": 215.80000019073486
+      },
+      "counts": {
+        "createBuffer": 30,
+        "bufferData": 30,
+        "createTexture": 17,
+        "texImage2D": 1,
+        "generateMipmap": 18,
+        "texStorage2D": 16,
+        "texSubImage2D": 16
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 1.4000000953674316,
+        "createTexture": 0.09999990463256836,
+        "texImage2D": 0,
+        "generateMipmap": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 185.29999923706055
+      },
+      "sizes": {
+        "bufferData": 3227148
+      },
+      "peakHeapBytes": 176784952,
+      "geometryReplacements": 0,
+      "repeat": 2
+    }
+  ]
+}
