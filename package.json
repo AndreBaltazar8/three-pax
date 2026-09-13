@@ -24,7 +24,7 @@
     "fixtures": "node scripts/compatibility-assets.mjs",
     "prepare:decoders": "node scripts/prepare-decoders.mjs",
     "postinstall": "npm run prepare:decoders",
-    "test": "node --test tests/api.test.mjs",
+    "test": "node --test tests/api.test.mjs tests/resources.test.mjs",
     "test:browser": "playwright test",
     "benchmark": "node scripts/benchmark-v0.mjs",
     "build:interactivity": "node scripts/build-interactivity.mjs",
@@ -32,7 +32,8 @@
     "preassets": "npm run setup:converter",
     "preassets:optimized": "npm run setup:converter",
     "prefixtures": "npm run setup:converter",
-    "test:package": "node scripts/check-package.mjs"
+    "test:package": "node scripts/check-package.mjs",
+    "profile:resources": "node scripts/profile-resources.mjs"
   },
   "peerDependencies": {
     "three": "0.186.x"

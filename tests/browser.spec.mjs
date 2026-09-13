@@ -245,3 +245,11 @@ test('v0 texture tiles can refine a selected region and resume to exact final pi
  });
  const stats=await(await page.request.get('/assets/TestInteractivity.stats.json')).json();expect(report.codec).toBe('tile-lattice');expect(report.complete).toBe(true);expect(report.hash).toBe(stats.verification.textures[0].hash);expect(report.tileCount).toBe(4);expect(report.partial).toBeLessThan(report.total);
 });
+
+test('native morph option supports override materials',async({page})=>{
+ const {makeMorphFixture}=await import('./morph-fixture.mjs');const fixture=await makeMorphFixture();
+ await page.route('**/assets/catalog.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify([fixture])}));
+ await open(page);await page.selectOption('#rate','8192');await page.evaluate(async()=>{const {PAXLoader}=await import(performance.getEntriesByType('resource').find(e=>new URL(e.name).pathname==='/src/PAXLoader.js').name);const load=PAXLoader.prototype.load;PAXLoader.prototype.load=function(url,options){return load.call(this,url,{...options,reuseMorphTextures:false});};try{await window.lab.run();}finally{PAXLoader.prototype.load=load;}});
+ const images=await page.evaluate(async()=>{const T=await import(performance.getEntriesByType('resource').find(e=>new URL(e.name).pathname.endsWith('/three.js')).name);for(const p of Object.values(window.lab.panes))p.scene.overrideMaterial=new T.MeshNormalMaterial();window.lab.freeze(1);await window.lab.frame();return Object.values(window.lab.panes).map(p=>p.renderer.domElement.toDataURL().split(',')[1]);});
+ await compareImages(images);
+});

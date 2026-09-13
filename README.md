@@ -54,6 +54,9 @@ supports `new Worker(new URL(..., import.meta.url))`, such as Vite.
 copies them there. Applications can configure `setKTX2Loader`, `setDRACOLoader`
 and `setMeshoptDecoder` themselves.
 
+For buffer reuse, frame budgets and allocation measurements, see
+[loading resources](docs/RESOURCES.md).
+
 ## Range loading
 
 ```js
@@ -94,8 +97,9 @@ npm run test:browser      # keep npm run dev running in another terminal
   alone is insufficient. Applications can host PAX files as static assets.
 - Previews are approximate; final data is lossless within the format's defined
   profile. The converter enforces the 5% file-overhead cap.
-- Morph refinements rebuild GPU morph caches. KTX2 upgrades retain CPU transcodes
-  but resize GPU storage. Splat sorting is per primitive, not scene-wide.
+- Renderer-assisted morph and tile updates reuse GPU storage. Fallback cases and
+  KTX2 dimension upgrades can still rebuild caches; see the resource guide.
+  Splat sorting is per primitive, not scene-wide.
 
 See [compatibility and adapters](docs/COMPATIBILITY.md),
 [spec-pax](https://github.com/AndreBaltazar8/spec-pax),

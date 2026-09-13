@@ -1,0 +1,1597 @@
+{
+  "environment": "Chromium headless / SwiftShader; 480x360; 8 MiB/s per stream unless RATE overrides; fresh page per run; JS heap includes application and Three.js, excludes GPU and workers; WebGL times measure submission not GPU completion",
+  "records": [
+    {
+      "asset": "BoomBox",
+      "format": "pax",
+      "firstMs": 370.90000009536743,
+      "completeMs": 5659.400000095367,
+      "frameCount": 315,
+      "frameGaps": {
+        "p95": 16.800000000000182,
+        "max": 116.79999999999995,
+        "over16_7": 93,
+        "over50": 3
+      },
+      "renderCpuMs": {
+        "p95": 0.40000009536743164,
+        "max": 120.10000038146973
+      },
+      "counts": {
+        "createTexture": 6,
+        "texStorage2D": 6,
+        "texSubImage2D": 1926,
+        "generateMipmap": 8,
+        "createBuffer": 5,
+        "bufferData": 5,
+        "bufferSubData": 37,
+        "deleteTexture": 1
+      },
+      "atBase": {
+        "createTexture": 3,
+        "texStorage2D": 3,
+        "texSubImage2D": 3,
+        "generateMipmap": 3
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 301.59999322891235,
+        "generateMipmap": 0.09999990463256836,
+        "createBuffer": 0,
+        "bufferData": 0,
+        "bufferSubData": 0.40000009536743164,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 244032,
+        "bufferSubData": 490208
+      },
+      "peakHeapBytes": 94464152,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 1,
+        "textureRectUploads": 1920,
+        "geometryReservedBytes": 268181,
+        "textureReservedBytes": 50331648,
+        "cpuWorkMs": 542.3000059127808,
+        "maxTaskMs": 75.10000038146973,
+        "maxSliceMs": 75.10000038146973,
+        "budgetYields": 147,
+        "uploadBytes": 570907168,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 194,
+        "tileAllocatedBytes": 50855936,
+        "patchReuses": 1919
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "BoomBox",
+      "format": "pax",
+      "firstMs": 279.90000009536743,
+      "completeMs": 4792.599999904633,
+      "frameCount": 268,
+      "frameGaps": {
+        "p95": 16.799999999999727,
+        "max": 133.3,
+        "over16_7": 78,
+        "over50": 3
+      },
+      "renderCpuMs": {
+        "p95": 0.5,
+        "max": 5.900000095367432
+      },
+      "counts": {
+        "createTexture": 6,
+        "texStorage2D": 6,
+        "texSubImage2D": 1926,
+        "generateMipmap": 8,
+        "createBuffer": 5,
+        "bufferData": 5,
+        "bufferSubData": 37,
+        "deleteTexture": 1
+      },
+      "atBase": {
+        "createTexture": 3,
+        "texStorage2D": 3,
+        "texSubImage2D": 3,
+        "generateMipmap": 3
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 254.30000257492065,
+        "generateMipmap": 0,
+        "createBuffer": 0,
+        "bufferData": 0.09999990463256836,
+        "bufferSubData": 0.2999997138977051,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 244032,
+        "bufferSubData": 457440
+      },
+      "peakHeapBytes": 93601121,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 1,
+        "textureRectUploads": 1920,
+        "geometryReservedBytes": 268181,
+        "textureReservedBytes": 50331648,
+        "cpuWorkMs": 558.6999859809875,
+        "maxTaskMs": 137,
+        "maxSliceMs": 137.4000005722046,
+        "budgetYields": 132,
+        "uploadBytes": 570907168,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 194,
+        "tileAllocatedBytes": 50855936,
+        "patchReuses": 1919
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "BoomBox",
+      "format": "pax",
+      "firstMs": 273.1000003814697,
+      "completeMs": 4873.10000038147,
+      "frameCount": 275,
+      "frameGaps": {
+        "p95": 16.799999999999727,
+        "max": 116.70000000000005,
+        "over16_7": 88,
+        "over50": 3
+      },
+      "renderCpuMs": {
+        "p95": 0.40000009536743164,
+        "max": 5.099999904632568
+      },
+      "counts": {
+        "createTexture": 6,
+        "texStorage2D": 6,
+        "texSubImage2D": 1926,
+        "generateMipmap": 8,
+        "createBuffer": 5,
+        "bufferData": 5,
+        "bufferSubData": 40,
+        "deleteTexture": 1
+      },
+      "atBase": {
+        "createTexture": 3,
+        "texStorage2D": 3,
+        "texSubImage2D": 3,
+        "generateMipmap": 3
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 210.4000129699707,
+        "generateMipmap": 0,
+        "createBuffer": 0,
+        "bufferData": 0,
+        "bufferSubData": 0.5000009536743164,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 244032,
+        "bufferSubData": 529872
+      },
+      "peakHeapBytes": 100857439,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 1,
+        "textureRectUploads": 1920,
+        "geometryReservedBytes": 268181,
+        "textureReservedBytes": 50331648,
+        "cpuWorkMs": 521.10001039505,
+        "maxTaskMs": 132.5,
+        "maxSliceMs": 132.80000019073486,
+        "budgetYields": 136,
+        "uploadBytes": 570907168,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 194,
+        "tileAllocatedBytes": 50855936,
+        "patchReuses": 1919
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "BoomBox",
+      "format": "glb",
+      "firstMs": 1418.9000000953674,
+      "completeMs": 1418.9000000953674,
+      "frameCount": 86,
+      "frameGaps": {
+        "p95": 50,
+        "max": 50,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 0.40000009536743164,
+        "max": 62.30000019073486
+      },
+      "counts": {
+        "createBuffer": 5,
+        "bufferData": 5,
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 4
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.09999990463256836,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 55.59999990463257,
+        "generateMipmap": 0.09999990463256836
+      },
+      "sizes": {
+        "bufferData": 207816
+      },
+      "peakHeapBytes": 73916795,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "BoomBox",
+      "format": "glb",
+      "firstMs": 1431.5,
+      "completeMs": 1431.5,
+      "frameCount": 86,
+      "frameGaps": {
+        "p95": 66.59999999999991,
+        "max": 66.59999999999991,
+        "over16_7": 2,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.39999961853027344,
+        "max": 61.700000286102295
+      },
+      "counts": {
+        "createBuffer": 5,
+        "bufferData": 5,
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 4
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.2999997138977051,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 54.90000009536743,
+        "generateMipmap": 0
+      },
+      "sizes": {
+        "bufferData": 207816
+      },
+      "peakHeapBytes": 73949407,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "BoomBox",
+      "format": "glb",
+      "firstMs": 1409.5,
+      "completeMs": 1409.5999999046326,
+      "frameCount": 86,
+      "frameGaps": {
+        "p95": 66.59999999999991,
+        "max": 66.59999999999991,
+        "over16_7": 2,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.3000001907348633,
+        "max": 62.19999980926514
+      },
+      "counts": {
+        "createBuffer": 5,
+        "bufferData": 5,
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 4
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.20000028610229492,
+        "createTexture": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 55.799999713897705,
+        "generateMipmap": 0.09999990463256836
+      },
+      "sizes": {
+        "bufferData": 207816
+      },
+      "peakHeapBytes": 73928835,
+      "geometryReplacements": 0,
+      "repeat": 2
+    },
+    {
+      "asset": "BrainStem",
+      "format": "pax",
+      "firstMs": 136.30000019073486,
+      "completeMs": 690.4000000953674,
+      "frameCount": 41,
+      "frameGaps": {
+        "p95": 33.30000000000001,
+        "max": 50.10000000000002,
+        "over16_7": 10,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 3.3000001907348633,
+        "max": 23.299999713897705
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 35,
+        "bufferSubData": 1247
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 1.400001049041748,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.09999990463256836,
+        "bufferSubData": 6.000000476837158
+      },
+      "sizes": {
+        "bufferData": 2379624,
+        "bufferSubData": 4702404
+      },
+      "peakHeapBytes": 51935821,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 2626369,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 39.700003147125244,
+        "maxTaskMs": 0.5999999046325684,
+        "maxSliceMs": 2.1999988555908203,
+        "budgetYields": 19,
+        "uploadBytes": 4890600,
+        "networkQueuePeakBytes": 1069109,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "BrainStem",
+      "format": "pax",
+      "firstMs": 135.2999997138977,
+      "completeMs": 649.1999998092651,
+      "frameCount": 40,
+      "frameGaps": {
+        "p95": 16.799999999999955,
+        "max": 49.900000000000006,
+        "over16_7": 10,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 2.200000286102295,
+        "max": 20
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 35,
+        "bufferSubData": 1563
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 1.2000007629394531,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.19999980926513672,
+        "bufferSubData": 2.0999999046325684
+      },
+      "sizes": {
+        "bufferData": 2379624,
+        "bufferSubData": 5298848
+      },
+      "peakHeapBytes": 52915971,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 2626369,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 38.100003719329834,
+        "maxTaskMs": 0.40000009536743164,
+        "maxSliceMs": 2.299999237060547,
+        "budgetYields": 18,
+        "uploadBytes": 4890600,
+        "networkQueuePeakBytes": 1069109,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "BrainStem",
+      "format": "pax",
+      "firstMs": 125.60000038146973,
+      "completeMs": 738.4000000953674,
+      "frameCount": 46,
+      "frameGaps": {
+        "p95": 16.80000000000001,
+        "max": 33.30000000000001,
+        "over16_7": 14,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 2.5999999046325684,
+        "max": 20.09999990463257
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 40,
+        "bufferSubData": 1562
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.2999997138977051,
+        "bufferData": 0.8999991416931152,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0,
+        "bufferSubData": 5.600000381469727
+      },
+      "sizes": {
+        "bufferData": 2379624,
+        "bufferSubData": 5242240
+      },
+      "peakHeapBytes": 53559623,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 2626369,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 44.89999771118164,
+        "maxTaskMs": 1.200000286102295,
+        "maxSliceMs": 2.8999996185302734,
+        "budgetYields": 21,
+        "uploadBytes": 4890600,
+        "networkQueuePeakBytes": 1069109,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "BrainStem",
+      "format": "glb",
+      "firstMs": 480,
+      "completeMs": 480.09999990463257,
+      "frameCount": 27,
+      "frameGaps": {
+        "p95": 100,
+        "max": 100,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 1.5,
+        "max": 23.90000009536743
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 3
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.20000028610229492,
+        "bufferData": 1.400001049041748,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0
+      },
+      "sizes": {
+        "bufferData": 2009628
+      },
+      "peakHeapBytes": 46140600,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "BrainStem",
+      "format": "glb",
+      "firstMs": 456.5,
+      "completeMs": 456.69999980926514,
+      "frameCount": 27,
+      "frameGaps": {
+        "p95": 66.60000000000002,
+        "max": 66.60000000000002,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 2,
+        "max": 16.700000286102295
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 3
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 0.7999997138977051,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0
+      },
+      "sizes": {
+        "bufferData": 2009628
+      },
+      "peakHeapBytes": 45387176,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "BrainStem",
+      "format": "glb",
+      "firstMs": 435.8999996185303,
+      "completeMs": 436,
+      "frameCount": 27,
+      "frameGaps": {
+        "p95": 50,
+        "max": 50,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 1.9000000953674316,
+        "max": 16.300000190734863
+      },
+      "counts": {
+        "createBuffer": 295,
+        "bufferData": 295,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 3
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.19999980926513672,
+        "bufferData": 0.7000007629394531,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0
+      },
+      "sizes": {
+        "bufferData": 2009628
+      },
+      "peakHeapBytes": 45426328,
+      "geometryReplacements": 0,
+      "repeat": 2
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "pax",
+      "firstMs": 441,
+      "completeMs": 6217.099999904633,
+      "frameCount": 170,
+      "frameGaps": {
+        "p95": 83.39999999999998,
+        "max": 166.69999999999993,
+        "over16_7": 123,
+        "over50": 22
+      },
+      "renderCpuMs": {
+        "p95": 0.8000001907348633,
+        "max": 50.59999990463257
+      },
+      "counts": {
+        "createTexture": 27,
+        "texStorage2D": 26,
+        "texSubImage2D": 1498,
+        "generateMipmap": 181,
+        "createBuffer": 30,
+        "bufferData": 30,
+        "texImage2D": 1,
+        "bufferSubData": 170,
+        "deleteTexture": 10
+      },
+      "atBase": {
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 5
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 1205.4000000953674,
+        "generateMipmap": 0.39999961853027344,
+        "createBuffer": 0.19999980926513672,
+        "bufferData": 0.9000005722045898,
+        "texImage2D": 0,
+        "bufferSubData": 1.1000008583068848,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 3795480,
+        "bufferSubData": 6587568
+      },
+      "peakHeapBytes": 105149439,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 10,
+        "textureRectUploads": 1472,
+        "geometryReservedBytes": 4174440,
+        "textureReservedBytes": 46137344,
+        "cpuWorkMs": 1370.4999976158142,
+        "maxTaskMs": 151.19999980926514,
+        "maxSliceMs": 151.19999980926514,
+        "budgetYields": 89,
+        "uploadBytes": 607344356,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 178,
+        "tileAllocatedBytes": 46661632,
+        "patchReuses": 1471
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "pax",
+      "firstMs": 364.5,
+      "completeMs": 6211.5,
+      "frameCount": 170,
+      "frameGaps": {
+        "p95": 83.30000000000018,
+        "max": 150,
+        "over16_7": 126,
+        "over50": 23
+      },
+      "renderCpuMs": {
+        "p95": 0.8000001907348633,
+        "max": 43.299999713897705
+      },
+      "counts": {
+        "createTexture": 27,
+        "texStorage2D": 26,
+        "texSubImage2D": 1498,
+        "generateMipmap": 186,
+        "createBuffer": 30,
+        "bufferData": 30,
+        "texImage2D": 1,
+        "bufferSubData": 167,
+        "deleteTexture": 10
+      },
+      "atBase": {
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 5
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 1073.3000001907349,
+        "generateMipmap": 0.40000009536743164,
+        "createBuffer": 0,
+        "bufferData": 0.9000005722045898,
+        "texImage2D": 0,
+        "bufferSubData": 1.8000011444091797,
+        "deleteTexture": 0
+      },
+      "sizes": {
+        "bufferData": 3795480,
+        "bufferSubData": 6234512
+      },
+      "peakHeapBytes": 111799433,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 10,
+        "textureRectUploads": 1472,
+        "geometryReservedBytes": 4174440,
+        "textureReservedBytes": 46137344,
+        "cpuWorkMs": 1233.4999990463257,
+        "maxTaskMs": 173.40000009536743,
+        "maxSliceMs": 173.40000009536743,
+        "budgetYields": 90,
+        "uploadBytes": 607344356,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 178,
+        "tileAllocatedBytes": 46661632,
+        "patchReuses": 1471
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "pax",
+      "firstMs": 364.09999990463257,
+      "completeMs": 6284.099999904633,
+      "frameCount": 167,
+      "frameGaps": {
+        "p95": 83.40000000000009,
+        "max": 150,
+        "over16_7": 131,
+        "over50": 26
+      },
+      "renderCpuMs": {
+        "p95": 0.8999996185302734,
+        "max": 43.90000009536743
+      },
+      "counts": {
+        "createTexture": 27,
+        "texStorage2D": 26,
+        "texSubImage2D": 1498,
+        "generateMipmap": 184,
+        "createBuffer": 30,
+        "bufferData": 30,
+        "texImage2D": 1,
+        "bufferSubData": 167,
+        "deleteTexture": 10
+      },
+      "atBase": {
+        "createTexture": 5,
+        "texStorage2D": 5,
+        "texSubImage2D": 5,
+        "generateMipmap": 5
+      },
+      "times": {
+        "createTexture": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 1117.600004196167,
+        "generateMipmap": 0.19999980926513672,
+        "createBuffer": 0,
+        "bufferData": 0.9000005722045898,
+        "texImage2D": 0,
+        "bufferSubData": 1.5,
+        "deleteTexture": 0.10000038146972656
+      },
+      "sizes": {
+        "bufferData": 3795480,
+        "bufferSubData": 6348592
+      },
+      "peakHeapBytes": 106914445,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 10,
+        "textureRectUploads": 1472,
+        "geometryReservedBytes": 4174440,
+        "textureReservedBytes": 46137344,
+        "cpuWorkMs": 1298.5999960899353,
+        "maxTaskMs": 172.5,
+        "maxSliceMs": 172.5,
+        "budgetYields": 93,
+        "uploadBytes": 607344356,
+        "networkQueuePeakBytes": 4194304,
+        "tileBufferAllocations": 178,
+        "tileAllocatedBytes": 46661632,
+        "patchReuses": 1471
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "glb",
+      "firstMs": 6048.900000095367,
+      "completeMs": 6048.900000095367,
+      "frameCount": 360,
+      "frameGaps": {
+        "p95": 750,
+        "max": 750,
+        "over16_7": 2,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.2999997138977051,
+        "max": 731.8000001907349
+      },
+      "counts": {
+        "createBuffer": 30,
+        "bufferData": 30,
+        "createTexture": 17,
+        "texImage2D": 1,
+        "generateMipmap": 18,
+        "texStorage2D": 16,
+        "texSubImage2D": 16
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 1.4000000953674316,
+        "createTexture": 0,
+        "texImage2D": 0,
+        "generateMipmap": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 296.199999332428
+      },
+      "sizes": {
+        "bufferData": 3227148
+      },
+      "peakHeapBytes": 176661877,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "glb",
+      "firstMs": 6066.89999961853,
+      "completeMs": 6067,
+      "frameCount": 359,
+      "frameGaps": {
+        "p95": 566.5999999999995,
+        "max": 566.5999999999995,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.3000001907348633,
+        "max": 527.5
+      },
+      "counts": {
+        "createBuffer": 30,
+        "bufferData": 30,
+        "createTexture": 17,
+        "texImage2D": 1,
+        "generateMipmap": 18,
+        "texStorage2D": 16,
+        "texSubImage2D": 16
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 1.5,
+        "createTexture": 0,
+        "texImage2D": 0,
+        "generateMipmap": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 276.2000012397766
+      },
+      "sizes": {
+        "bufferData": 3227148
+      },
+      "peakHeapBytes": 176620276,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "FlightHelmet",
+      "format": "glb",
+      "firstMs": 6049.300000190735,
+      "completeMs": 6049.400000095367,
+      "frameCount": 359,
+      "frameGaps": {
+        "p95": 583.3000000000002,
+        "max": 583.3000000000002,
+        "over16_7": 1,
+        "over50": 1
+      },
+      "renderCpuMs": {
+        "p95": 0.2999997138977051,
+        "max": 540
+      },
+      "counts": {
+        "createBuffer": 30,
+        "bufferData": 30,
+        "createTexture": 17,
+        "texImage2D": 1,
+        "generateMipmap": 18,
+        "texStorage2D": 16,
+        "texSubImage2D": 16
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 1.5,
+        "createTexture": 0,
+        "texImage2D": 0,
+        "generateMipmap": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 277.5000009536743
+      },
+      "sizes": {
+        "bufferData": 3227148
+      },
+      "peakHeapBytes": 176724206,
+      "geometryReplacements": 0,
+      "repeat": 2
+    },
+    {
+      "asset": "TestMorph",
+      "format": "pax",
+      "firstMs": 23.5,
+      "completeMs": 45.5,
+      "frameCount": 6,
+      "frameGaps": {
+        "p95": 16.700000000000017,
+        "max": 16.700000000000017,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 8.799999713897705,
+        "max": 8.799999713897705
+      },
+      "counts": {
+        "createTexture": 2,
+        "texStorage3D": 1,
+        "texSubImage3D": 6,
+        "createBuffer": 4,
+        "bufferData": 4,
+        "texStorage2D": 1,
+        "texSubImage2D": 1,
+        "bufferSubData": 7
+      },
+      "atBase": {
+        "createTexture": 1,
+        "texStorage3D": 1,
+        "texSubImage3D": 1
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage3D": 0,
+        "texSubImage3D": 0,
+        "createBuffer": 0,
+        "bufferData": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0,
+        "bufferSubData": 0.3000001907348633
+      },
+      "sizes": {
+        "bufferData": 44064,
+        "bufferSubData": 42240
+      },
+      "peakHeapBytes": 31414216,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 59854,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 5.5,
+        "maxTaskMs": 3,
+        "maxSliceMs": 4.199999809265137,
+        "budgetYields": 1,
+        "uploadBytes": 189288,
+        "networkQueuePeakBytes": 0,
+        "morphReservedBytes": 13200,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "TestMorph",
+      "format": "pax",
+      "firstMs": 27.5,
+      "completeMs": 82.59999990463257,
+      "frameCount": 7,
+      "frameGaps": {
+        "p95": 16.700000000000017,
+        "max": 16.700000000000017,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 11.5,
+        "max": 11.5
+      },
+      "counts": {
+        "createTexture": 2,
+        "texStorage3D": 1,
+        "texSubImage3D": 6,
+        "createBuffer": 4,
+        "bufferData": 4,
+        "texStorage2D": 1,
+        "texSubImage2D": 1,
+        "bufferSubData": 7
+      },
+      "atBase": {
+        "createTexture": 1,
+        "texStorage3D": 1,
+        "texSubImage3D": 1
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage3D": 0,
+        "texSubImage3D": 0.10000038146972656,
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 0,
+        "texStorage2D": 0.10000038146972656,
+        "texSubImage2D": 0,
+        "bufferSubData": 0.09999990463256836
+      },
+      "sizes": {
+        "bufferData": 44064,
+        "bufferSubData": 42240
+      },
+      "peakHeapBytes": 31400516,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 59854,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 29.59999990463257,
+        "maxTaskMs": 26.200000286102295,
+        "maxSliceMs": 26.300000190734863,
+        "budgetYields": 2,
+        "uploadBytes": 189288,
+        "networkQueuePeakBytes": 0,
+        "morphReservedBytes": 13200,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "TestMorph",
+      "format": "pax",
+      "firstMs": 35.60000038146973,
+      "completeMs": 77.7000002861023,
+      "frameCount": 8,
+      "frameGaps": {
+        "p95": 16.69999999999999,
+        "max": 16.69999999999999,
+        "over16_7": 0,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 7.100000381469727,
+        "max": 7.100000381469727
+      },
+      "counts": {
+        "createTexture": 2,
+        "texStorage3D": 1,
+        "texSubImage3D": 6,
+        "createBuffer": 4,
+        "bufferData": 4,
+        "texStorage2D": 1,
+        "texSubImage2D": 1,
+        "bufferSubData": 7
+      },
+      "atBase": {
+        "createTexture": 1,
+        "texStorage3D": 1,
+        "texSubImage3D": 1
+      },
+      "times": {
+        "createTexture": 0.09999990463256836,
+        "texStorage3D": 0,
+        "texSubImage3D": 0.09999990463256836,
+        "createBuffer": 0,
+        "bufferData": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 0,
+        "bufferSubData": 0
+      },
+      "sizes": {
+        "bufferData": 44064,
+        "bufferSubData": 42240
+      },
+      "peakHeapBytes": 31402160,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 0,
+        "geometryReservedBytes": 59854,
+        "textureReservedBytes": 0,
+        "cpuWorkMs": 22.299999713897705,
+        "maxTaskMs": 18.199999809265137,
+        "maxSliceMs": 18.300000190734863,
+        "budgetYields": 2,
+        "uploadBytes": 189288,
+        "networkQueuePeakBytes": 0,
+        "morphReservedBytes": 13200,
+        "tileBufferAllocations": 0,
+        "tileAllocatedBytes": 0,
+        "patchReuses": 0
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "TestMorph",
+      "format": "glb",
+      "firstMs": 27.300000190734863,
+      "completeMs": 27.300000190734863,
+      "frameCount": 4,
+      "frameGaps": {
+        "p95": 16.69999999999999,
+        "max": 16.69999999999999,
+        "over16_7": 0,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 10.200000286102295,
+        "max": 10.200000286102295
+      },
+      "counts": {
+        "createBuffer": 4,
+        "bufferData": 4,
+        "createTexture": 2,
+        "texStorage3D": 1,
+        "texSubImage3D": 1,
+        "texStorage2D": 1,
+        "texSubImage2D": 1
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0,
+        "createTexture": 0,
+        "texStorage3D": 0,
+        "texSubImage3D": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.09999990463256836
+      },
+      "sizes": {
+        "bufferData": 44064
+      },
+      "peakHeapBytes": 32393565,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "TestMorph",
+      "format": "glb",
+      "firstMs": 32.80000019073486,
+      "completeMs": 32.90000009536743,
+      "frameCount": 4,
+      "frameGaps": {
+        "p95": 16.700000000000017,
+        "max": 16.700000000000017,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 6.800000190734863,
+        "max": 6.800000190734863
+      },
+      "counts": {
+        "createBuffer": 4,
+        "bufferData": 4,
+        "createTexture": 2,
+        "texStorage3D": 1,
+        "texSubImage3D": 1,
+        "texStorage2D": 1,
+        "texSubImage2D": 1
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.09999990463256836,
+        "createTexture": 0,
+        "texStorage3D": 0,
+        "texSubImage3D": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0
+      },
+      "sizes": {
+        "bufferData": 44064
+      },
+      "peakHeapBytes": 32380393,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "TestMorph",
+      "format": "glb",
+      "firstMs": 40,
+      "completeMs": 40,
+      "frameCount": 4,
+      "frameGaps": {
+        "p95": 33.5,
+        "max": 33.5,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 17.199999809265137,
+        "max": 17.199999809265137
+      },
+      "counts": {
+        "createBuffer": 4,
+        "bufferData": 4,
+        "createTexture": 2,
+        "texStorage3D": 1,
+        "texSubImage3D": 1,
+        "texStorage2D": 1,
+        "texSubImage2D": 1
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0,
+        "createTexture": 0,
+        "texStorage3D": 0,
+        "texSubImage3D": 0.09999990463256836,
+        "texStorage2D": 0,
+        "texSubImage2D": 0
+      },
+      "sizes": {
+        "bufferData": 44064
+      },
+      "peakHeapBytes": 32384881,
+      "geometryReplacements": 0,
+      "repeat": 2
+    },
+    {
+      "asset": "TestInteractivity",
+      "format": "pax",
+      "firstMs": 38.40000009536743,
+      "completeMs": 94.40000009536743,
+      "frameCount": 8,
+      "frameGaps": {
+        "p95": 16.700000000000017,
+        "max": 16.700000000000017,
+        "over16_7": 2,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 9.799999713897705,
+        "max": 9.799999713897705
+      },
+      "counts": {
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 34,
+        "generateMipmap": 2,
+        "createBuffer": 4,
+        "bufferData": 4,
+        "bufferSubData": 9
+      },
+      "atBase": {
+        "createTexture": 1,
+        "texStorage2D": 1,
+        "texSubImage2D": 1,
+        "generateMipmap": 1
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 1.9000000953674316,
+        "generateMipmap": 0,
+        "createBuffer": 0,
+        "bufferData": 0,
+        "bufferSubData": 0.3000001907348633
+      },
+      "sizes": {
+        "bufferData": 87456,
+        "bufferSubData": 136768
+      },
+      "peakHeapBytes": 33172383,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 32,
+        "geometryReservedBytes": 99363,
+        "textureReservedBytes": 262144,
+        "cpuWorkMs": 5.5,
+        "maxTaskMs": 1.3999996185302734,
+        "maxSliceMs": 2.200000762939453,
+        "budgetYields": 2,
+        "uploadBytes": 2562984,
+        "networkQueuePeakBytes": 248058,
+        "tileBufferAllocations": 6,
+        "tileAllocatedBytes": 393216,
+        "patchReuses": 31
+      },
+      "repeat": 0
+    },
+    {
+      "asset": "TestInteractivity",
+      "format": "pax",
+      "firstMs": 38.700000286102295,
+      "completeMs": 78.59999990463257,
+      "frameCount": 8,
+      "frameGaps": {
+        "p95": 16.80000000000001,
+        "max": 16.80000000000001,
+        "over16_7": 2,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 4.900000095367432,
+        "max": 4.900000095367432
+      },
+      "counts": {
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 34,
+        "generateMipmap": 2,
+        "createBuffer": 4,
+        "bufferData": 4,
+        "bufferSubData": 9
+      },
+      "atBase": {
+        "createTexture": 1,
+        "texStorage2D": 1,
+        "texSubImage2D": 1,
+        "generateMipmap": 1
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 1.2000017166137695,
+        "generateMipmap": 0,
+        "createBuffer": 0,
+        "bufferData": 0.10000038146972656,
+        "bufferSubData": 0.09999990463256836
+      },
+      "sizes": {
+        "bufferData": 87456,
+        "bufferSubData": 120384
+      },
+      "peakHeapBytes": 33151755,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 32,
+        "geometryReservedBytes": 99363,
+        "textureReservedBytes": 262144,
+        "cpuWorkMs": 4.600001335144043,
+        "maxTaskMs": 1.4000000953674316,
+        "maxSliceMs": 2.000000476837158,
+        "budgetYields": 2,
+        "uploadBytes": 2562984,
+        "networkQueuePeakBytes": 248058,
+        "tileBufferAllocations": 6,
+        "tileAllocatedBytes": 393216,
+        "patchReuses": 31
+      },
+      "repeat": 1
+    },
+    {
+      "asset": "TestInteractivity",
+      "format": "pax",
+      "firstMs": 67.40000009536743,
+      "completeMs": 257.5,
+      "frameCount": 19,
+      "frameGaps": {
+        "p95": 16.700000000000017,
+        "max": 16.700000000000017,
+        "over16_7": 2,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 9.599999904632568,
+        "max": 9.599999904632568
+      },
+      "counts": {
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 34,
+        "generateMipmap": 2,
+        "createBuffer": 4,
+        "bufferData": 4,
+        "bufferSubData": 22
+      },
+      "atBase": {
+        "createTexture": 1,
+        "texStorage2D": 1,
+        "texSubImage2D": 1,
+        "generateMipmap": 1
+      },
+      "times": {
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 3.6999993324279785,
+        "generateMipmap": 0,
+        "createBuffer": 0.09999990463256836,
+        "bufferData": 0.20000028610229492,
+        "bufferSubData": 0.39999961853027344
+      },
+      "sizes": {
+        "bufferData": 87456,
+        "bufferSubData": 218688
+      },
+      "peakHeapBytes": 33562241,
+      "geometryReplacements": 0,
+      "loader": {
+        "geometryDisposals": 0,
+        "textureReplacements": 0,
+        "textureRectUploads": 32,
+        "geometryReservedBytes": 99363,
+        "textureReservedBytes": 262144,
+        "cpuWorkMs": 52.200000286102295,
+        "maxTaskMs": 30.5,
+        "maxSliceMs": 31.100000381469727,
+        "budgetYields": 8,
+        "uploadBytes": 2562984,
+        "networkQueuePeakBytes": 248058,
+        "tileBufferAllocations": 6,
+        "tileAllocatedBytes": 393216,
+        "patchReuses": 31
+      },
+      "repeat": 2
+    },
+    {
+      "asset": "TestInteractivity",
+      "format": "glb",
+      "firstMs": 122.90000009536743,
+      "completeMs": 123,
+      "frameCount": 8,
+      "frameGaps": {
+        "p95": 16.69999999999999,
+        "max": 16.69999999999999,
+        "over16_7": 0,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 14.599999904632568,
+        "max": 14.599999904632568
+      },
+      "counts": {
+        "createBuffer": 4,
+        "bufferData": 4,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 2,
+        "generateMipmap": 1
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.19999980926513672,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.19999980926513672,
+        "generateMipmap": 0
+      },
+      "sizes": {
+        "bufferData": 87456
+      },
+      "peakHeapBytes": 33082211,
+      "geometryReplacements": 0,
+      "repeat": 0
+    },
+    {
+      "asset": "TestInteractivity",
+      "format": "glb",
+      "firstMs": 106.59999990463257,
+      "completeMs": 106.69999980926514,
+      "frameCount": 8,
+      "frameGaps": {
+        "p95": 16.700000000000017,
+        "max": 16.700000000000017,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 15.100000381469727,
+        "max": 15.100000381469727
+      },
+      "counts": {
+        "createBuffer": 4,
+        "bufferData": 4,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 2,
+        "generateMipmap": 1
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0.10000038146972656,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.5,
+        "generateMipmap": 0
+      },
+      "sizes": {
+        "bufferData": 87456
+      },
+      "peakHeapBytes": 32601959,
+      "geometryReplacements": 0,
+      "repeat": 1
+    },
+    {
+      "asset": "TestInteractivity",
+      "format": "glb",
+      "firstMs": 117.90000009536743,
+      "completeMs": 117.90000009536743,
+      "frameCount": 9,
+      "frameGaps": {
+        "p95": 16.700000000000017,
+        "max": 16.700000000000017,
+        "over16_7": 1,
+        "over50": 0
+      },
+      "renderCpuMs": {
+        "p95": 6.5,
+        "max": 6.5
+      },
+      "counts": {
+        "createBuffer": 4,
+        "bufferData": 4,
+        "createTexture": 2,
+        "texStorage2D": 2,
+        "texSubImage2D": 2,
+        "generateMipmap": 1
+      },
+      "atBase": {},
+      "times": {
+        "createBuffer": 0,
+        "bufferData": 0,
+        "createTexture": 0,
+        "texStorage2D": 0,
+        "texSubImage2D": 0.19999980926513672,
+        "generateMipmap": 0
+      },
+      "sizes": {
+        "bufferData": 87456
+      },
+      "peakHeapBytes": 33221515,
+      "geometryReplacements": 0,
+      "repeat": 2
+    }
+  ],
+  "recordedAt": "2026-09-13T20:07:12.939Z",
+  "assetSHA256": {
+    "BoomBox": {
+      "glb": "f8b918445ebdd006768232205a62f5182d2208ca57f84c6ccc084943c0bc8f15",
+      "pax": "849b725fdc6d2afcd1ae8cb450c5576e0b53ea79ca998342f0dd63fe17ba9860"
+    },
+    "BrainStem": {
+      "glb": "ddda3a53b5c9771f992463034a430340ba2bac571e5869c723f7cba4976e9174",
+      "pax": "20ec35b2483f5c6ca71cee24baefbe4a2e28b815e65451150cdf32054fd6b2e1"
+    },
+    "FlightHelmet": {
+      "glb": "a42b3ca4fff8afb54ccd15da1cffeac59ee0bc5b3626e5ff0286b6100a72b83d",
+      "pax": "a7ecf0a3bb649d96a2b2e25707bee021a64d6a8d67c207d6974ab170d0c4f166"
+    },
+    "TestMorph": {
+      "glb": "08559b003ee438d3d3f2fec8a50bdd16a6c9eeac1f252c82ef9ea80a395ce939",
+      "pax": "ff6cc810a1e29c603cf26008640005a2011a35ff2226c5923f0966cd4e383845"
+    },
+    "TestInteractivity": {
+      "glb": "9bf5271ead87fc42b341bec3c81c757603e8dc61ee98e484ce80c33c14312742",
+      "pax": "9e25eced65f39fa071e7a625a3e2bf8360fff11cb901c8cbe13313c2bb65bbf6"
+    }
+  }
+}
