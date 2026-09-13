@@ -253,3 +253,20 @@ test('native morph option supports override materials',async({page})=>{
  const images=await page.evaluate(async()=>{const T=await import(performance.getEntriesByType('resource').find(e=>new URL(e.name).pathname.endsWith('/three.js')).name);for(const p of Object.values(window.lab.panes))p.scene.overrideMaterial=new T.MeshNormalMaterial();window.lab.freeze(1);await window.lab.frame();return Object.values(window.lab.panes).map(p=>p.renderer.domElement.toDataURL().split(',')[1]);});
  await compareImages(images);
 });
+
+test('morph optimization preserves animation-pointer material bindings',async({page})=>{
+ const {makeMorphFixture}=await import('./morph-fixture.mjs');await makeMorphFixture();
+ const {parseGLB,makeGLB}=await import('./../scripts/gltf.mjs');const {convert}=await import('./../scripts/convert.mjs');
+ const {json,bin}=parseGLB(await fs.readFile('public/assets/TestMorph.glb'));
+ const output=json.accessors.length,view=json.bufferViews.length,values=new Float32Array([.2,.8,.2]);
+ json.bufferViews.push({buffer:0,byteOffset:bin.length,byteLength:values.byteLength});json.accessors.push({bufferView:view,componentType:5126,type:'SCALAR',count:3});
+ json.extensionsUsed=['KHR_animation_pointer'];json.animations[0].samplers.push({input:json.animations[0].samplers[0].input,output,interpolation:'LINEAR'});
+ json.animations[0].channels.push({sampler:1,target:{path:'pointer',extensions:{KHR_animation_pointer:{pointer:'/materials/0/pbrMetallicRoughness/roughnessFactor'}}}});
+ await fs.writeFile('public/assets/TestMorphPointer.glb',makeGLB(json,Buffer.concat([bin,Buffer.from(values.buffer)])));
+ const stats=await convert('public/assets/TestMorphPointer.glb','public/assets/TestMorphPointer.pax'),fixture={...stats,id:'TestMorphPointer',name:'Morph and pointer',kind:'Fixture',sourcePage:'#',triangles:stats.primitives.reduce((n,p)=>n+p.finalTriangles,0)};
+ await page.route('**/assets/catalog.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify([fixture])}));
+ await open(page);await page.selectOption('#rate','8192');const record=await page.evaluate(()=>window.lab.run());expect(record.metrics.progressive.error).toBeNull();
+ const proof=await page.evaluate(async()=>{window.lab.freeze(1);await window.lab.frame();const values=[];for(const p of Object.values(window.lab.panes)){let roughness;p.asset.traverse(o=>{if(o.isMesh)roughness=o.material.roughness;});values.push(roughness);}return {values,disposals:window.lab.panes.progressive.result.metrics.geometryDisposals};});
+ expect(proof.values[0]).toBeCloseTo(.8);expect(proof.values[1]).toBeCloseTo(.8);expect(proof.disposals).toBeGreaterThan(0);
+ await compareImages(await pixels(page));
+});

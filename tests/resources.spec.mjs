@@ -55,3 +55,15 @@ test("slow consumer bounds read-ahead and cancellation stops the network worker"
   expect(result.peak).toBe(result.maxBufferedBytes);
   expect(result.after).toBe(result.before);
 });
+
+test('splat packing includes vertices published across scheduling yields',async({page})=>{
+ await page.goto('/');await page.waitForFunction(()=>!!window.lab);
+ const report=await page.evaluate(async()=>{
+  const {PAXLoader}=await import('/src/PAXLoader.js');const pane=window.lab.panes.progressive;
+  const result=await new PAXLoader().load('/stream/TestGaussianSplats.pax?kbps=65536',{renderer:pane.renderer,uploadBudgetBytes:1,onScene(gltf){pane.scene.add(gltf.scene);}});
+  await window.lab.frame();let checked=0,errors=0;
+  for(const state of result.states)for(const source of state.meshes){const mesh=source.children.find(o=>o.userData.paxSplatRenderer);if(!mesh)continue;const data=mesh.material.uniforms.splatData.value.image.data,position=state.geometry.attributes.position;for(let i=0;i<state.vertexCount;i++)for(let c=0;c<3;c++){checked++;if(data[i*76+c]!==position.getComponent(i,c))errors++;}}
+  result.dispose();return {checked,errors};
+ });
+ expect(report.checked).toBeGreaterThan(100);expect(report.errors).toBe(0);
+});

@@ -291,7 +291,17 @@ export class PAXLoader {
               vertexCount: p.baseVertices,
             };
           });
-          if (renderer && reuseMorphTextures && !gltf.variantMaterials?.length)
+          // These plugins retain material references before PAX bootstrap completes.
+          // Keep their original materials instead of cloning them for a morph shader.
+          if (
+            renderer &&
+            reuseMorphTextures &&
+            !gltf.variantMaterials?.length &&
+            !bootstrapJSON.extensionsUsed?.some((name) =>
+              ["KHR_animation_pointer", "KHR_interactivity"].includes(name),
+            ) &&
+            !this.extensions.size
+          )
             for (const state of states) {
               if (
                 state &&
@@ -494,6 +504,8 @@ export class PAXLoader {
             if (!state) continue;
             if (added.length % (state.indexWidth + 1))
               throw new Error("Invalid triangle patch length");
+            // All appended attributes are ready before topology can expose them.
+            state.geometry.userData.paxVertexCount = p.start + p.count;
             const topology = state.triangles;
             const flush = () => {
               topology.flush(state.geometry.index);

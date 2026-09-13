@@ -45,7 +45,8 @@ frame. A 60 Hz frame allows about 16.7 ms for all of it.
 | Network | Consumer credits bound the application read-ahead queue. A paused consumer pauses further worker reads. |
 
 The morph path currently falls back to native cache rebuilding for instanced morphs
-and scenes with material variants. Set `reuseMorphTextures: false` for scene override
+and scenes with material variants, animation pointers, interactivity or registered
+custom extensions, preserving their material bindings. Set `reuseMorphTextures: false` for scene override
 materials or applications that replace morph materials after load; those materials
 do not inherit the custom shader. Tangent morphs keep their existing texture but
 still repack/upload the whole tangent cache when attributes change. Three.js also
@@ -102,5 +103,5 @@ Loader metrics include:
   Use instrumented WebGL counters for actual driver object creation/deletion.
 - `networkQueuePeakBytes`: peak application stream queue occupancy.
 
-See [resource measurements](../measurements/resources-summary.md) for the recorded
+See [resource measurements](https://github.com/AndreBaltazar8/three-pax/blob/main/measurements/resources-summary.md) for the recorded
 before/after results and remaining stalls.

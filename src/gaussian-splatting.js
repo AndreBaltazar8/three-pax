@@ -37,7 +37,7 @@ function attachSplat(source,definition){
   sorter.onmessage=({data})=>{busy=false;readySort=data;};
   material.addEventListener('dispose',()=>sorter.terminate());
   mesh.onBeforeRender=(renderer,scene,camera)=>{
-    const input=source.geometry,attrs=input.attributes;const signature=Object.values(attrs).map(a=>`${a.count}:${a.version}`).join(',');
+    const input=source.geometry,attrs=input.attributes;const signature=(input.userData.paxVertexCount??attrs.position.count)+':'+Object.values(attrs).map(a=>`${a.count}:${a.version}`).join(',');
     if(signature!==lastSignature){
       const count=attrs.position.count,width=Math.min(renderer.capabilities.maxTextureSize,2048),height=Math.ceil(count*19/width);if(height>renderer.capabilities.maxTextureSize)throw new Error('Gaussian field exceeds this GPU texture capacity');
       const existing=uniforms.splatData.value;const data=existing?.image.data.length===width*height*4?existing.image.data:new Float32Array(width*height*4);const read=(name)=>attrs[`${SPLAT_EXTENSION}:${name}`.toLowerCase()];
