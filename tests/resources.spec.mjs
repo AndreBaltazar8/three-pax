@@ -67,3 +67,15 @@ test('splat packing includes vertices published across scheduling yields',async(
  });
  expect(report.checked).toBeGreaterThan(100);expect(report.errors).toBe(0);
 });
+
+test('cancelled bootstrap releases GPU textures before exposing a scene',async({page})=>{
+ await page.goto('/');await page.waitForFunction(()=>!!window.lab);
+ const result=await page.evaluate(async()=>{
+  const {PAXLoader}=await import('/src/PAXLoader.js'),renderer=window.lab.panes.progressive.renderer,controller=new AbortController();
+  const before=renderer.info.memory.textures,init=renderer.initTexture;let exposed=false,rejected=false,allocated=false;
+  renderer.initTexture=function(texture){init.call(this,texture);allocated=true;controller.abort();};
+  try{await new PAXLoader().load('/stream/TestInteractivity.pax?kbps=65536',{renderer,signal:controller.signal,onScene(){exposed=true;}});}catch(error){rejected=error.name==='AbortError';}finally{renderer.initTexture=init;}
+  return {before,after:renderer.info.memory.textures,exposed,rejected,allocated};
+ });
+ expect(result.allocated).toBe(true);expect(result.rejected).toBe(true);expect(result.exposed).toBe(false);expect(result.after).toBe(result.before);
+});

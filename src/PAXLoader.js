@@ -141,15 +141,19 @@ export class PAXLoader {
       imageStates = [],
       complete = false,
       pendingBootstrap = 0,
-      scenePublished = false;
+      scenePublished = false,
+      sceneExposed = false;
     const notify = async (hook, event) => {
       for (const extension of this.extensions.values())
         await extension[hook]?.({ event, gltf, manifest, states, imageStates });
     };
     const publishScene = async () => {
+      signal.throwIfAborted();
       gltf.prepareGaussianFields?.();
       await notify("onBase", { kind: "base" });
       gltf.interactivity?.start();
+      signal.throwIfAborted();
+      sceneExposed = true;
       await onScene(gltf, manifest);
       scenePublished = true;
       onRefine({
@@ -200,6 +204,7 @@ export class PAXLoader {
             if (!nativeExtensions.has(name) && !this.extensions.has(name))
               throw new Error(`Missing progressive runtime extension: ${name}`);
           gltf = await this.gltfLoader.parseAsync(base.buffer, "");
+          signal.throwIfAborted();
           if (!gltf.scene) {
             gltf.scene = new THREE.Group();
             gltf.scenes.push(gltf.scene);
@@ -886,6 +891,30 @@ export class PAXLoader {
       lifetime.abort();
       decoder?.dispose();
       gltf?.interactivity?.dispose();
+      if (gltf && !sceneExposed) {
+        const geometries = new Set(),
+          materials = new Set(),
+          textures = new Set();
+        const collect = (object) => {
+          if (object.geometry) geometries.add(object.geometry);
+          for (const material of Array.isArray(object.material)
+            ? object.material
+            : [object.material])
+            if (material) {
+              materials.add(material);
+              for (const value of Object.values(material))
+                if (value?.isTexture) textures.add(value);
+            }
+        };
+        for (const scene of gltf.scenes) scene.traverse(collect);
+        for (const state of states || [])
+          for (const mesh of state?.meshes || []) mesh.traverse(collect);
+        for (const state of imageStates)
+          for (const texture of state.textures) textures.add(texture);
+        for (const geometry of geometries) geometry.dispose();
+        for (const material of materials) material.dispose();
+        for (const texture of textures) texture.dispose();
+      }
     };
     const refine = async (options = {}) => {
       signal.throwIfAborted();

@@ -1,4 +1,3 @@
-import { decodePacket } from "./format.js";
 export class PacketDecoder {
   constructor() {
     this.next = 0;
@@ -15,6 +14,7 @@ export class PacketDecoder {
     this.worker.onerror = (e) => this.dispose(new Error(e.message));
   }
   run(op, args, transfer = []) {
+    if (this.disposed) return Promise.reject(new Error("Decoder disposed"));
     return new Promise((resolve, reject) => {
       const id = this.next++;
       this.pending.set(id, { resolve, reject });
@@ -22,11 +22,13 @@ export class PacketDecoder {
     });
   }
   release(buffer) {
+    if (this.disposed) return;
     this.worker.postMessage({ op: "release", args: { buffer } }, [buffer]);
   }
   decode = (entry, bytes) =>
     this.run("packet", { entry, bytes }, [bytes.buffer]);
   dispose(error = new Error("Decoder disposed")) {
+    this.disposed = true;
     this.worker.terminate();
     for (const p of this.pending.values()) p.reject(error);
     this.pending.clear();

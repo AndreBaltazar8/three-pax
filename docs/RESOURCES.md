@@ -62,7 +62,9 @@ remain separate memory and latency costs.
 `result.dispose()` stops the session worker/network and interactivity. Scene
 geometries, materials and textures remain application-owned; dispose them when
 removing the model. Disposing a geometry also releases its PAX morph texture and
-custom shadow materials.
+custom shadow materials. A failed or cancelled bootstrap releases resources that
+have not reached `onScene`. When retiring a configured loader, also dispose its
+KTX2/Draco decoder loaders; these are separate from the PAX packet worker.
 
 ## Measurements
 
