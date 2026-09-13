@@ -1,41 +1,41 @@
 # three-pax
 
-A Three.js loader for **PAX numeric file format version 0**. Display a coarse scene
-as its bootstrap arrives, then refine the same objects, geometry, materials and
-textures. Supports full streaming and selective HTTP-range sessions with resume.
+Three.js loader for **PAX v0**. Render the bootstrap scene, then refine its geometry
+and textures through a full stream or resumable HTTP-range requests.
 
-## Run the included samples
+## Samples
+
+Requires **Node.js 24+**.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open **http://localhost:4186** for a side-by-side glTF/PAX comparison with identical
-server-paced bandwidth, first-render/completion timers, download counters, orbit
-controls and animation. Included samples: BoomBox, diffuse transmission,
-interactive scene, Gaussian splats and KTX2 GPU texture mips. Their `.pax` files
-are ready to load; no converter run is needed to start the viewer.
+- [Comparison](http://localhost:4186): glTF/PAX views with matched server-paced
+  bandwidth, first-render/completion timers, download counters and orbit controls.
+- [Range loading](http://localhost:4186/examples/range.html): coarse loading,
+  selective texture refinement and resume.
 
-Open **http://localhost:4186/examples/range.html** to try coarse-only loading,
-selective texture refinement and resume directly.
+Bundled assets include BoomBox, diffuse transmission, interactivity, Gaussian
+splats and KTX2 mips. They run without conversion.
 
 ```sh
-npm run assets           # optional large original helmet and animated BrainStem
-npm run assets:optimized # optional meshopt + KTX2 helmet baseline
+npm run assets           # optional helmet and animated BrainStem
+npm run assets:optimized # optional meshopt + KTX2 helmet
 npm run fixtures -- --catalog
-npm run benchmark        # 3 runs per heavy asset; run both asset commands first
+npm run benchmark        # three runs per heavy asset; run both asset commands first
 ```
 
-Asset counters measure model bytes, excluding application/decoder downloads.
-Decoder startup and the shared tab's CPU/GPU affect wall-clock results. Frame-gap
-measurements are shared main-thread stalls, not isolated per-loader CPU attribution.
-Historical recordings from the original experiment are not bundled.
+Asset generation installs a pinned converter over GitHub SSH and requires working
+GitHub SSH access. `npm run setup:converter` installs it explicitly. The bundled
+viewer and normal install/build do not need the converter.
 
-## Use the loader
+## Loader
 
 ```js
 import {PAXLoader, createGLTFLoader, configureDecoders} from 'three-pax';
+
 const loader = new PAXLoader();
 loader.gltfLoader = configureDecoders(createGLTFLoader(), renderer);
 const result = await loader.load('/model.pax', {
@@ -44,44 +44,40 @@ const result = await loader.load('/model.pax', {
   onProgress({bytes, total}) { console.log(bytes, total); },
   onRefine(event) { console.log(event.kind, event.level); },
 });
-// Tick animations/interactivity from your render loop as in the included sample.
 ```
 
-**Repository access:** the converter is an optional development tool pinned to its
-GitHub commit. Asset/fixture generation automatically installs it and needs SSH
-access to `AndreBaltazar8/convert-pax`. The normal `npm ci`, bundled viewer, build
-and runtime do not need access to that repository. You can install it explicitly
-with `npm run setup:converter`.
+Update animations and interactivity in your render loop; see the samples.
+Tested with **Three.js r186 and WebGL2**. Default workers require a bundler that
+supports `new Worker(new URL(..., import.meta.url))`, such as Vite.
 
-`configureDecoders` expects Three.js Basis/Draco files at `/decoders/`. The sample
-copies them during `npm ci`. Applications can instead configure their own
-`setKTX2Loader`, `setDRACOLoader` and `setMeshoptDecoder`. A bundler supporting
-`new Worker(new URL(..., import.meta.url))`, such as Vite, is required for default
-workers. Three.js r186 and WebGL2 are the tested target.
+`configureDecoders` uses Basis/Draco files at `/decoders/`; sample installation
+copies them there. Applications can configure `setKTX2Loader`, `setDRACOLoader`
+and `setMeshoptDecoder` themselves.
+
+## Range loading
 
 ```js
 let session = await loader.load('/model.pax', {
   transport: 'range', maxLevel: 0, onScene,
 });
 session = await session.refine({primitives: [0], images: [0], tiles: [0]});
-session = await session.refine(); // only missing packets; complete final asset
+session = await session.refine(); // fetch remaining packets
 console.log(session.complete, session.bytes);
-session.dispose();              // release the session worker and interactivity
+session.dispose();              // release worker and interactivity
 ```
 
-Range hosts must return valid HTTP 206/Content-Range. For cross-origin hosting,
-expose Content-Range and ETag through CORS. `maxLevel` controls scheduled levels;
-primitive/image/tile lists select refinements. Bootstrap always includes the whole
-coarse scene. Scene-wide extension barriers can require additional geometry.
-Resume retains state in memory; it is not a disk cache. Default `stream` transport
-makes one request and is preferable when the full asset is wanted.
+The host must support HTTP 206 with valid `Content-Range`. Cross-origin hosts must
+expose `Content-Range` and `ETag` through CORS. `maxLevel` limits scheduled levels;
+resource lists select refinements. The bootstrap includes the whole coarse scene,
+and extension dependencies may require extra geometry. Resume state is in memory.
+Use the default `stream` transport when loading the whole asset in one request.
 
-## Verify and build
+## Verification
 
 ```sh
 npm test
 npm run build
-npm run test:package       # install and check the actual packed library
+npm run test:package
 npx playwright install chromium
 npm run fixtures -- --catalog
 npm run assets
@@ -89,22 +85,22 @@ npm run assets:optimized
 npm run test:browser      # keep npm run dev running in another terminal
 ```
 
-CI uses 512 KiB/s for the first-frame streaming assertion so shader compilation on
-a slow software renderer does not outlast the entire network transfer. Recorded
-benchmarks keep their explicitly reported rates; tests do not establish timing
-guarantees for arbitrary machines.
+## Limits
 
-`dist/` alone does not provide the benchmark's `/stream/` endpoint. Use the included
-Node server for throttled comparisons. A production app can serve static PAX files
-from a normal asset host.
+- Download counters exclude app/decoder bytes. Timings include decoder startup
+  and shared CPU/GPU work; frame gaps do not isolate each loader's CPU cost.
+  CI tests first-frame streaming at 512 KiB/s, not a timing guarantee.
+- Throttled comparisons require the Node server's `/stream/` endpoint; `dist/`
+  alone is insufficient. Applications can host PAX files as static assets.
+- Previews are approximate; final data is lossless within the format's defined
+  profile. The converter enforces the 5% file-overhead cap.
+- Morph refinements rebuild GPU morph caches. KTX2 upgrades retain CPU transcodes
+  but resize GPU storage. Splat sorting is per primitive, not scene-wide.
 
-[Complete specification](https://github.com/AndreBaltazar8/spec-pax) ·
-[Converter](https://github.com/AndreBaltazar8/convert-pax) ·
-[Supported glTF semantics and extension adapters](docs/COMPATIBILITY.md) ·
-[Notices and asset licenses](THIRD_PARTY.md)
+See [compatibility and adapters](docs/COMPATIBILITY.md),
+[spec-pax](https://github.com/AndreBaltazar8/spec-pax),
+[convert-pax](https://github.com/AndreBaltazar8/convert-pax) and
+[blender-pax](https://github.com/AndreBaltazar8/blender-pax).
 
-The converter enforces the 5% whole-file overhead cap. Intermediate quality is
-approximate; final decoded data is lossless within the defined profile. GPU morph
-caches still rebuild for morph-bearing refinements; KTX2 mip upgrades retain CPU
-transcodes but resize GPU storage. Splat ordering is asynchronous per primitive,
-not a global ordering across multiple fields. These are documented research limits.
+[MIT](LICENSE). Sample assets and dependencies have separate
+[licenses](THIRD_PARTY.md).
